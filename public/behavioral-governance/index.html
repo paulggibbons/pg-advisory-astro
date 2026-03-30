@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Behavioral Governance™ — Full Build Matrix</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;700&display=swap');
+
+  :root {
+    --ink: #0f0e0d;
+    --paper: #f5f0e8;
+    --gold: #b8922a;
+    --mid: #6b6560;
+    --light: #e8e2d8;
+    --rule: 1px solid #c8bfb0;
+    --dark-bg: #1a1713;
+    /* Dimension accent colors */
+    --d1: #2a5a7b; /* Decision Rights */
+    --d2: #8b2a2a; /* Agent Authority */
+    --d3: #c84b2f; /* Risk Intelligence */
+    --d4: #3a5fa0; /* Governance Intelligence */
+    --d5: #8b5a2b; /* 1st-Derivative Talent */
+    --d6: #4a6b5a; /* Strategic Coherence */
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark-bg);
+    color: var(--ink);
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  /* Page Header */
+  .page-header {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    padding: 40px 48px 32px;
+    background: var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-header::after {
+    content: '§';
+    font-family: 'DM Serif Display', serif;
+    font-size: 300px;
+    color: rgba(255,255,255,0.03);
+    position: absolute;
+    right: 40px;
+    top: -40px;
+    line-height: 1;
+  }
+
+  .page-header .label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .page-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--paper);
+    line-height: 1.1;
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-header h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .page-header .subtitle {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(245,240,232,0.6);
+    margin-top: 16px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-header .governing-insight {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: rgba(245,240,232,0.4);
+    margin-top: 20px;
+    max-width: 700px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+    border-left: 2px solid var(--gold);
+    padding-left: 16px;
+  }
+
+  .page-header .governing-insight strong {
+    color: rgba(245,240,232,0.7);
+  }
+
+  .page-header .meta-arch {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .meta-pill {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--paper);
+    padding: 8px 20px;
+    border: 1px solid rgba(245,240,232,0.2);
+  }
+
+  .meta-pill span {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: var(--mid);
+    margin-top: 2px;
+  }
+
+  /* System Bar */
+  .system-bar {
+    max-width: 1400px;
+    margin: 0 auto 2px;
+    display: flex;
+    background: var(--ink);
+  }
+
+  .sys-item {
+    flex: 1;
+    padding: 13px 16px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .sys-item:last-child { border-right: none; }
+  .sys-item.active { background: var(--gold); }
+  .sys-item.warning { background: rgba(255,80,50,0.08); border-left: 2px solid rgba(255,80,50,0.3); }
+
+  .sys-layer {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 3px;
+  }
+
+  .sys-item.active .sys-layer { color: rgba(0,0,0,0.55); }
+  .sys-item.warning .sys-layer { color: rgba(255,120,80,0.7); }
+
+  .sys-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .sys-item.active .sys-name { color: #000; }
+  .sys-item.warning .sys-name { color: rgba(255,140,100,0.8); }
+
+  .sys-meta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9.5px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  .sys-item.active .sys-meta { color: rgba(0,0,0,0.45); }
+
+  /* Column Headers */
+  .col-headers {
+    max-width: 1400px;
+    margin: 0 auto 2px;
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr;
+    gap: 2px;
+  }
+
+  .col-header {
+    background: var(--ink);
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .col-header:first-child {
+    background: transparent;
+  }
+
+  .col-header .col-banner {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(245,240,232,0.35);
+    margin-bottom: 4px;
+  }
+
+  .col-header .col-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: var(--gold);
+  }
+
+  .col-header .col-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    color: var(--mid);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  .col-header .col-tradition {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: rgba(245,240,232,0.5);
+    margin-top: 6px;
+  }
+
+  /* Matrix Grid */
+  .matrix {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .dimension-row {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr;
+    gap: 2px;
+    min-height: 180px;
+  }
+
+  /* Definition Column */
+  .dim-def {
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dim-def::after {
+    content: attr(data-num);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    color: rgba(255,255,255,0.06);
+    position: absolute;
+    right: 8px;
+    bottom: -20px;
+    line-height: 1;
+  }
+
+  .dim-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+  }
+
+  .dim-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--paper);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .dim-claim {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: rgba(245,240,232,0.6);
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+  }
+
+  .dim-condition {
+    font-size: 10px;
+    color: rgba(245,240,232,0.35);
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Content Cells */
+  .cell {
+    background: var(--paper);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  .cell > * { position: relative; z-index: 1; }
+
+  .cell-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--mid);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: var(--rule);
+  }
+
+  .cell-item {
+    margin-bottom: 14px;
+    padding-left: 12px;
+    border-left: 3px solid transparent;
+  }
+
+  .cell-item:last-child { margin-bottom: 0; }
+
+  .cell-item .item-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+
+  .cell-item .item-desc {
+    font-size: 11.5px;
+    line-height: 1.5;
+    color: #3a3530;
+  }
+
+  /* Dimension-specific colors */
+  .d1 .dim-def { background: var(--d1); }
+  .d1 .cell-item { border-left-color: var(--d1); }
+  .d2 .dim-def { background: var(--d2); }
+  .d2 .cell-item { border-left-color: var(--d2); }
+  .d3 .dim-def { background: var(--d3); }
+  .d3 .cell-item { border-left-color: var(--d3); }
+  .d4 .dim-def { background: var(--d4); }
+  .d4 .cell-item { border-left-color: var(--d4); }
+  .d5 .dim-def { background: var(--d5); }
+  .d5 .cell-item { border-left-color: var(--d5); }
+  .d6 .dim-def { background: var(--d6); }
+  .d6 .cell-item { border-left-color: var(--d6); }
+
+  /* Footer */
+  .matrix-footer {
+    max-width: 1400px;
+    margin: 2px auto 0;
+    background: var(--ink);
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .matrix-footer .brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--paper);
+  }
+
+  .matrix-footer .version {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--mid);
+  }
+
+  /* Reading List Section */
+  .reading-list {
+    max-width: 1400px;
+    margin: 40px auto 0;
+    background: var(--ink);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reading-list::before {
+    content: '§';
+    font-family: 'DM Serif Display', serif;
+    font-size: 240px;
+    color: rgba(255,255,255,0.02);
+    position: absolute;
+    right: 40px;
+    top: -30px;
+    line-height: 1;
+  }
+
+  .reading-list .rl-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .reading-list h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--paper);
+    margin-bottom: 8px;
+  }
+
+  .reading-list .rl-subtitle {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(245,240,232,0.5);
+    margin-bottom: 32px;
+  }
+
+  .rl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .rl-entry {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(200,191,176,0.08);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .rl-entry .rl-author {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #e8c44a;
+  }
+
+  .rl-entry .rl-work {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--paper);
+    line-height: 1.4;
+  }
+
+  .rl-entry .rl-line {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.4;
+    margin-top: 2px;
+  }
+
+  .rl-note {
+    grid-column: 1 / -1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--mid);
+    border-top: 1px solid rgba(200,191,176,0.15);
+    padding-top: 24px;
+    margin-top: 24px;
+    line-height: 1.6;
+  }
+
+  .rl-note strong { color: var(--paper); }
+
+  /* Strapline */
+  .strapline {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--ink);
+    padding: 28px 48px;
+    border-top: 2px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .strapline::after {
+    content: '⚡';
+    font-size: 180px;
+    position: absolute;
+    right: 40px;
+    top: -40px;
+    opacity: 0.03;
+    line-height: 1;
+  }
+
+  .strapline-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(24px, 3.2vw, 42px);
+    color: var(--paper);
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+  }
+
+  .strapline-text em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  /* CAIO Issues Bar */
+  .caio-issues {
+    max-width: 1400px;
+    margin: 2px auto 0;
+    background: #000;
+    padding: 24px 48px 28px;
+    border-left: 4px solid var(--gold);
+    position: relative;
+  }
+
+  .caio-dateline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .caio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 32px;
+  }
+
+  .caio-issue {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.55;
+    padding-left: 14px;
+    border-left: 2px solid rgba(255,255,255,0.1);
+  }
+
+  .caio-issue strong {
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+  }
+
+  .caio-issue .caio-src {
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  @media print {
+    body { background: white; padding: 10px; }
+    .page-header, .dim-def { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* Repo CTA Strip */
+  .repo-cta {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #1a120b;
+    padding: 28px 48px;
+    border-top: 1px solid rgba(184, 146, 42, 0.25);
+    border-bottom: 1px solid rgba(184, 146, 42, 0.25);
+  }
+  .repo-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .repo-cta-text {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #c8bfb0;
+    line-height: 1.5;
+    max-width: 680px;
+  }
+  .repo-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: var(--ink);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 12px 28px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .repo-cta-btn:hover { background: #d4a82a; }
+  .repo-cta-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+  @media (max-width: 900px) {
+    .repo-cta { padding: 24px; }
+    .repo-cta-inner { flex-direction: column; text-align: center; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Page Header -->
+<div class="page-header">
+  <div class="label">ADAPTIVE ADOPTION™ — BEHAVIORAL GOVERNANCE™</div>
+  <h1><em>Behavioral</em> Governance</h1>
+  <div class="subtitle">The CAIO Change Agenda — six dimensions of what the AI change leader must drive.</div>
+  <div class="governing-insight">
+    <strong>Governance is the enabling architecture of adoption.</strong> Not compliance. Not policing. Not the committee that says no. The CAIO is the organizational change leader for AI — responsible for adoption that creates value, governance that enables speed, talent that keeps pace, and strategic coherence across an AI estate that no one else has sight of. These six dimensions are what the role requires: the decisions, the risks, the intelligence, the talent, and the integration that turn governance from a brake into an accelerator.
+  </div>
+
+</div>
+
+<!-- Strapline — thesis statement -->
+<div class="strapline">
+  <div class="strapline-text">When it comes to governance,<br><em>attention is not all you need.</em></div>
+</div>
+
+<!-- CAIO Operating Context — Mid-2026 (time-bound, not durable) -->
+<div class="caio-issues">
+  <div class="caio-dateline">THE CAIO CHANGE AGENDA — MID-2026 OPERATING CONTEXT</div>
+  <div class="caio-grid">
+    <div class="caio-issue"><strong>Shadow AI vs. safe enablement.</strong> Over a third of employees share sensitive data with unsanctioned AI tools. McKinsey: the scaling problem is not employee readiness — it's leaders failing to steer fast enough. <div class="caio-src">IBM, McKinsey 2025–26</div></div>
+    <div class="caio-issue"><strong>Pilots vs. real workflow redesign.</strong> Only 25% have moved 40%+ of pilots into production. Only 1% of leaders call their company mature. Workflow redesign has the biggest EBIT impact — yet only 21% have fundamentally redesigned any workflows. <div class="caio-src">Deloitte, McKinsey 2025–26</div></div>
+    <div class="caio-issue"><strong>Ownership vs. committee fog.</strong> AI governance is jointly owned, with two leaders in charge on average. Maturing organizations are moving from committee-heavy models to clear lines of accountability. <div class="caio-src">McKinsey, PwC 2025–26</div></div>
+    <div class="caio-issue"><strong>Data trust vs. garbage-in scaling.</strong> 45% cite data accuracy or bias as the leading barrier to scaling AI. 42% cite insufficient proprietary data. Companies feel less prepared operationally — infrastructure, data, risk, talent — than they do strategically. <div class="caio-src">IBM, Deloitte 2025–26</div></div>
+    <div class="caio-issue"><strong>Principles vs. operational controls.</strong> Most firms have moved past writing Responsible AI principles. The hard part: translating them into inventory, monitoring, standards, and repeatable controls at scale. <div class="caio-src">PwC 2025–26</div></div>
+    <div class="caio-issue"><strong>Agents vs. human accountability.</strong> Three-quarters of companies plan to deploy agentic AI within two years. Only 21% have a mature governance model for agents. AI stops answering questions and starts taking actions — governance hasn't caught up. <div class="caio-src">Deloitte, PwC 2025–26</div></div>
+    <div class="caio-issue"><strong>Speed vs. audit / regulatory readiness.</strong> EU AI Act broad enforcement begins August 2, 2026. Providers and deployers already need to demonstrate AI literacy. Auditors may assess how AI is governed, documented, and controlled in SOX-relevant processes. <div class="caio-src">EU AI Act, PwC 2025–26</div></div>
+    <div class="caio-issue"><strong>Board fluency vs. management lag.</strong> Nearly half of executives view AI as a major risk area — only 10% of directors do. The oversight gap: boards should treat AI as a full-board strategic issue, not a side-topic. <div class="caio-src">PwC Board Effectiveness Survey 2025</div></div>
+  </div>
+</div>
+
+<!-- Repo CTA Strip -->
+<section class="repo-cta">
+  <div class="repo-cta-inner">
+    <p class="repo-cta-text">When management ideas live in PDFs, they become rigid. The tools, diagnostics, and methods behind this framework are open and inspectable.</p>
+    <a href="https://github.com/paulggibbons/adaptive_adoption" target="_blank" rel="noopener" class="repo-cta-btn">
+      <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      EXPLORE THE REPO
+    </a>
+  </div>
+</section>
+
+<!-- Section divider: context → durable framework -->
+<div style="max-width:1400px; margin:0 auto; background:var(--gold); padding:10px 48px; text-align:center;">
+  <span style="font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:4px; color:var(--ink);">THE DURABLE FRAMEWORK — SIX DIMENSIONS OF BEHAVIORAL GOVERNANCE</span>
+</div>
+
+<!-- Column Headers -->
+<div class="col-headers">
+  <div class="col-header"></div>
+  <div class="col-header">
+    <div class="col-banner">BEHAVIORAL</div>
+    <div class="col-title">STANDARDS</div>
+    <div class="col-sub">WHAT ENACTED GOVERNANCE LOOKS LIKE</div>
+    <div class="col-tradition">Espoused → Enacted — closing the gap</div>
+  </div>
+  <div class="col-header">
+    <div class="col-banner">BEHAVIORAL</div>
+    <div class="col-title">MEASURES</div>
+    <div class="col-sub">HOW YOU'D KNOW — THREE-LAYER ASSESSMENT</div>
+    <div class="col-tradition">Self-report · Evidence · Behavioral observation</div>
+  </div>
+</div>
+
+<!-- Matrix -->
+<div class="matrix">
+
+  <!-- DIMENSION 1: Decision Rights -->
+  <div class="dimension-row d1">
+    <div class="dim-def" data-num="1">
+      <div class="dim-num">DIMENSION 1</div>
+      <div class="dim-name">Decision Rights</div>
+      <div class="dim-claim">"If someone wants to spin up a small pilot, who do they have to ask? If the answer is 'three committees and nine months,' they'll build in the dark."</div>
+      <div class="dim-condition">← Shadow AI Proliferation · Velocity</div>
+      <div class="dim-condition" style="margin-top:6px; font-style:italic; color:rgba(245,240,232,0.45);">Trust link → RIST™ institutional trust. See Leadership Delta D5, Change Agility P3.</div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">STANDARDS — ENACTED GOVERNANCE</div>
+      <div class="cell-item">
+        <div class="item-name">Governance Speed Standard</div>
+        <div class="item-desc">The approval architecture must be faster than the workaround. Gravitee: 81% of teams actively deploying, only 14.4% with full approval. If governance takes months and an agent takes an afternoon, people build in the dark. Governance speed is a design choice.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">AI Governance Circle Protocol</div>
+        <div class="item-desc">Sprint-based governance cadence: decision rights reviewed, contested, and reallocated in response to conditions on the ground — not committee cycles that move at institutional speed while agents multiply at machine speed.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Shadow AI Integration Path</div>
+        <div class="item-desc">The standard is not "stop shadow AI" — that ship has sailed. The standard: a clear, fast path from shadow to sanctioned. Detection → assessment → integration, not detection → punishment → repeat.</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">MEASURES — THREE-LAYER ASSESSMENT</div>
+      <div class="cell-item">
+        <div class="item-name">Self-Report</div>
+        <div class="item-desc">"If you wanted to launch a small AI pilot tomorrow, who would you ask? How long would it take?" Diagnostic: "I don't know" or "months" = espoused governance. "I'd just build it" = failed governance.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Evidence Layer</div>
+        <div class="item-desc">Pilot request → approval time (target: &lt;2 weeks for low-stakes). Shadow AI ratio: sanctioned / total agents. Governance Circle cadence logs. Governance modifications in last 90 days.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Behavioral Observation</div>
+        <div class="item-desc">Do people go through governance or around it? Key ratio: formal requests vs. informal deployments. If governance channels are quiet but AI usage is growing, governance is being routed around — a design problem, not a people problem.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIMENSION 2: Agent Authority -->
+  <div class="dimension-row d2">
+    <div class="dim-def" data-num="2">
+      <div class="dim-num">DIMENSION 2</div>
+      <div class="dim-name">Agent Authority</div>
+      <div class="dim-claim">"What does the AI get to decide on its own? What emails can it reply to? What transactions can it approve? This cannot be static."</div>
+      <div class="dim-condition">← Complexity · Velocity · Three-Body Problem</div>
+      <div class="dim-condition" style="margin-top:6px; font-style:italic; color:rgba(245,240,232,0.45);">Trust link → RIST™ task trust. See Leadership Delta D5, Change Agility P3.</div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">STANDARDS — ENACTED GOVERNANCE</div>
+      <div class="cell-item">
+        <div class="item-name">Dynamic Autonomy Calibration</div>
+        <div class="item-desc">Agent autonomy calibrated to model reliability — recalibrated as reliability changes (Floridi's oversight calibration). Model improves → dial turns up. New hallucination domain → dial turns down. Calibration is continuous, not annual.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Consequence-Based Autonomy Tiering</div>
+        <div class="item-desc"><strong>Low stakes</strong> (drafts, brainstorming): full autonomy, spot-check. <strong>Medium</strong> (customer-facing, analytical): agent acts, human reviews before delivery. <strong>High</strong> (financial, legal, reputational): human-in-the-loop mandatory. Tier determined by consequence, not capability. Critical dependency: if underlying data is garbage, autonomy dials down regardless of model quality — authority is a data question before a technology question.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Agent Chain Governance</div>
+        <div class="item-desc">The authority question: not just "what can this agent do?" but "what can it authorize other agents to do?" Autonomous scope expansion without human decision is the failure mode. Every agent chain needs: scope boundary, escalation trigger, human checkpoint at defined intervals.</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">MEASURES — THREE-LAYER ASSESSMENT</div>
+      <div class="cell-item">
+        <div class="item-name">Self-Report</div>
+        <div class="item-desc">"Do you know what your AI agents are authorized to do autonomously? Has that scope changed in the last 90 days?" "They do whatever they were set up to do" = ungoverned autonomy.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Evidence Layer</div>
+        <div class="item-desc">Agent autonomy map: scope per agent + last review date. Autonomy tier distribution. Scope change frequency. Agent chain depth: max chain length without human checkpoint. Orphaned agent count.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Behavioral Observation</div>
+        <div class="item-desc">When a new model release changes capability, does the organization recalibrate agent autonomy — or does the same scope persist? If agent authority hasn't changed in six months, it's not calibrated — it's frozen.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIMENSION 3: Risk Intelligence -->
+  <div class="dimension-row d3">
+    <div class="dim-def" data-num="3">
+      <div class="dim-num">DIMENSION 3</div>
+      <div class="dim-name">Risk Intelligence</div>
+      <div class="dim-claim">"Not 'identify and manage risks' — that's structural and boring. What do you DO with risk data? And what do you do when you don't have it?"</div>
+      <div class="dim-condition">← Shadow AI Proliferation · Regulatory Volatility</div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">STANDARDS — ENACTED GOVERNANCE</div>
+      <div class="cell-item">
+        <div class="item-name">Risk Data → Decision Change</div>
+        <div class="item-desc">When risk data reaches a decision-maker, something observably changes. If risk data circulates without altering behavior, governance is decorative. Test: name the last governance decision that changed because of risk data. If you can't, risk intelligence is absent.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Decision Under Acknowledged Uncertainty</div>
+        <div class="item-desc">Most AI risk data doesn't exist yet — failure modes are novel, precedent is thin. The standard: make explicit decisions under acknowledged uncertainty. "We don't know the risk profile; here's how we're proceeding; here's what we're watching." Deploying without acknowledging the gap and freezing until certainty arrives are both governance failures.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">AI Risk Literacy</div>
+        <div class="item-desc">Can the people making governance decisions read the risk landscape? Not technical risk (that's engineering) — organizational risk: reputational exposure, regulatory surface, business-model disruption. Risk literacy is a capability, not a compliance checkbox.</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">MEASURES — THREE-LAYER ASSESSMENT</div>
+      <div class="cell-item">
+        <div class="item-name">Self-Report</div>
+        <div class="item-desc">"When did risk data last change a governance decision?" "What's your biggest AI risk where you lack adequate data?" Diagnostic: "I can't remember" + "we have it covered" = absent risk intelligence.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Evidence Layer</div>
+        <div class="item-desc">Decision change log: governance decisions modified by risk data in 90 days. Acknowledged uncertainty register: deployments with explicitly documented unknowns. Risk literacy scores. Incident response time + governance modification rate post-incident.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Behavioral Observation</div>
+        <div class="item-desc">When risk data is presented, does the room engage or glaze? When data is <em>absent</em>, does someone name the gap — or does the decision proceed as if certainty existed? The quality of the uncertainty conversation is the observable.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIMENSION 4: Governance Intelligence -->
+  <div class="dimension-row d4">
+    <div class="dim-def" data-num="4">
+      <div class="dim-num">DIMENSION 4</div>
+      <div class="dim-name">Governance Intelligence</div>
+      <div class="dim-claim">"The measurement system that governs the governance. The Five Dials™. Meta-governance — are the guardrails themselves working?"</div>
+      <div class="dim-condition">← The Five Dials™ · Three-Layer Assessment</div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">STANDARDS — ENACTED GOVERNANCE</div>
+      <div class="cell-item">
+        <div class="item-name">The Five Dials™</div>
+        <div class="item-desc"><strong>Utilization Depth</strong> — integration into workflows, not adoption rate. <strong>Capability Expansion Rate</strong> — 1st-derivative: speed of new capability absorption. <strong>Trust Stability</strong> — RIST scores tracked over time. <strong>Iteration Velocity</strong> — governance response speed. <strong>Leadership Delta</strong> — gap between current leadership behavior and what AI demands.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Three-Layer Assessment Protocol</div>
+        <div class="item-desc">Every governance metric assessed at three layers: self-report, evidence, behavioral observation. The gap between layers IS the diagnostic.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Governance Iteration Cadence</div>
+        <div class="item-desc">Governance review aligned to model release cadence. If technology changes every 6 weeks, governance that reviews every 6 months is governing a system that no longer exists.</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">MEASURES — META-GOVERNANCE</div>
+      <div class="cell-item">
+        <div class="item-name">Self-Report</div>
+        <div class="item-desc">"Is the governance system itself measured — or assumed to be working?" "When did we last change a protocol based on evidence it wasn't working?" Never revised = either perfect or unmeasured.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Evidence Layer</div>
+        <div class="item-desc">Five Dials dashboard: all five metrics tracked, trended, reviewed at cadence. Governance change log: protocols modified in last 90 days based on measurement data. Empty log = measurement disconnected from action.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Behavioral Observation</div>
+        <div class="item-desc">Does anyone reference Five Dials data in governance reviews — or is discussion anecdote-driven? "The data shows X, so we're changing Y" = governance intelligence enacted.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIMENSION 5: 1st-Derivative Talent -->
+  <div class="dimension-row d5">
+    <div class="dim-def" data-num="5">
+      <div class="dim-num">DIMENSION 5</div>
+      <div class="dim-name">1st-Derivative Talent</div>
+      <div class="dim-claim">"Not what skills people have — the rate at which they acquire new ones. And at CAIO level: is the AI talent pipeline bleeding the best?"</div>
+      <div class="dim-condition">← Epistemically Different · Velocity</div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">STANDARDS — ENACTED GOVERNANCE</div>
+      <div class="cell-item">
+        <div class="item-name">Rate of Acquisition, Not Inventory</div>
+        <div class="item-desc">Traditional talent governance measures what people know. 1st-derivative measures how fast they're learning. A team with moderate skills and a steep curve beats a team with strong skills and a flat one. Track the derivative, not the function.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Dynamic Role Architecture</div>
+        <div class="item-desc">Roles evolve as AI capability evolves — not static job descriptions frozen at hire date. When AI takes over 40% of a role's tasks, the role must transform — not just lose headcount.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Talent Pipeline Governance</div>
+        <div class="item-desc">At CAIO level: who is leaving and why? If top AI talent exits because governance is too slow or culture punishes experimentation, governance is eating its own seed corn. Retention of high-velocity learners: a governance metric, not an HR metric.</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">MEASURES — THREE-LAYER ASSESSMENT</div>
+      <div class="cell-item">
+        <div class="item-name">Self-Report</div>
+        <div class="item-desc">"How much faster are you learning AI skills this quarter vs. last?" "Has your role changed in the last 6 months because of AI?" Self-assessed learning velocity, calibrated against evidence.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Evidence Layer</div>
+        <div class="item-desc">Capability expansion rate (Five Dials). Upskilling velocity: new capabilities per quarter per team. Top AI performer retention rate. Role evolution: % of roles materially redefined in 12 months. Attrition analysis: are fast learners staying or leaving?</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Behavioral Observation</div>
+        <div class="item-desc">Are people experimenting with new AI tools — or using the same ones the same way as 6 months ago? Learning velocity is visible in tool adoption patterns, workflow evolution, and the quality of questions asked. Stagnation is equally visible.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIMENSION 6: Strategic Coherence -->
+  <div class="dimension-row d6">
+    <div class="dim-def" data-num="6">
+      <div class="dim-num">DIMENSION 6</div>
+      <div class="dim-name">Strategic Coherence</div>
+      <div class="dim-claim">"Strategic coherence is as important as strategic excellence." — Paul Gibbons</div>
+      <div class="dim-condition">← Complication · Stack Sprawl</div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">STANDARDS — ENACTED GOVERNANCE</div>
+      <div class="cell-item">
+        <div class="item-name">Whole-System Visibility</div>
+        <div class="item-desc">Someone has sight of the full AI landscape: agents, models, risk exposure, talent pipeline, strategic alignment. The CAIO dashboard is the governance instrument — where CTO data governance, CHRO talent data, and risk-function exposure maps converge. The CAIO doesn't own data infrastructure (CTO/CIO does). But the CAIO owns the question: are we locked into SaaS data moats? Is data portable? Data governance is the CTO's job; data <em>strategy</em> as it constrains AI adoption is the CAIO's.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Organizational Integration</div>
+        <div class="item-desc">Is the agent marketing built talking to the agent ops built? Is there a learning loop where one team's discovery accelerates another's? The CAIO's unique problem: the connective tissue of adoption. Pockets of excellence that don't connect are not a strategy — they're a coincidence.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Cross-Dimension Coherence</div>
+        <div class="item-desc">The five other dimensions must cohere. Decision rights contradicting agent authority = confusion. Talent strategy disconnected from risk intelligence = blind spots. Are six dimensions pulling together — or optimizing locally while the system fragments? Every governance decision traceable to a strategic objective; if it can't explain why it exists, it's bureaucratic accretion.</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="cell-label">MEASURES — THREE-LAYER ASSESSMENT</div>
+      <div class="cell-item">
+        <div class="item-name">Self-Report</div>
+        <div class="item-desc">"Can anyone describe the full AI governance picture?" "Do you know what other teams are building with AI?" If every team describes their initiatives but no one describes the system, coherence is absent.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Evidence Layer</div>
+        <div class="item-desc">CAIO dashboard: exists and integrates all six dimensions? Cross-team integration map. Organizational learning velocity: time from one team's discovery to another's adoption. Cross-dimension contradiction audit. Data portability score. Vendor lock-in assessment: SaaS moat exposure across AI estate.</div>
+      </div>
+      <div class="cell-item">
+        <div class="item-name">Behavioral Observation</div>
+        <div class="item-desc">Does AI governance review happen as an integrated whole — or does each dimension present separately with no synthesis? "But that contradicts what we decided in risk governance" = coherence working. No one notices the contradiction = coherence absent.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="matrix-footer">
+  <div class="brand">BEHAVIORAL GOVERNANCE™ — ADAPTIVE ADOPTION™ — PAUL GIBBONS ADVISORY</div>
+  <div class="version">DRAFT V0.1 — MARCH 27, 2026 — CO-CREATED WITH CLAUDE</div>
+</div>
+
+<!-- Reading List -->
+<div class="reading-list">
+  <div class="rl-label">INTELLECTUAL PROVENANCE</div>
+  <h2>Paul Gibbons' Governance Reading List</h2>
+  <div class="rl-subtitle">The scholarship that built this framework</div>
+
+  <div class="rl-grid">
+
+    <div class="rl-entry">
+      <div class="rl-author">ARTHUR, W. BRIAN</div>
+      <div class="rl-work">The Nature of Technology (2009)</div>
+      <div class="rl-line">Combinatorial evolution — technologies building on technologies. The intellectual foundation for agentic proliferation and agent chain governance.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">BICK, ALEXANDER; BLANDIN, ADAM; DEMING, DAVID</div>
+      <div class="rl-work">The Rapid Adoption of Generative AI (2024, rev. 2025)</div>
+      <div class="rl-line">By late 2024, nearly 40% of working-age adults used generative AI. The empirical anchor: the issue is no longer awareness but scaling, governance, and redesign.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">BRYNJOLFSSON, ERIK</div>
+      <div class="rl-work">AI's Use of Knowledge in Society (2025)</div>
+      <div class="rl-line">AI redistributes expertise and changes where judgment lives.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">BRYNJOLFSSON, ERIK; LI, DANIELLE; RAYMOND, LINDSEY</div>
+      <div class="rl-work">Generative AI at Work (2023)</div>
+      <div class="rl-line">AI diffuses best practice and accelerates capability building.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">CHOUDARY, SANGEET PAUL</div>
+      <div class="rl-work">Reshuffle (2025)</div>
+      <div class="rl-line">AI reorganizes coordination, not just tasks.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">DELL'ACQUA ET AL. / MOLLICK</div>
+      <div class="rl-work">A Field Experiment on Generative AI Reshaping the Nature of Expertise (2025)</div>
+      <div class="rl-line">AI alters collaboration and functional boundaries, not just productivity.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">FLORIDI, LUCIANO</div>
+      <div class="rl-work">The Ethics of AI (2023)</div>
+      <div class="rl-line">Calibrating human oversight to AI reliability. The philosophical backbone of D2 Agent Authority.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">MCKINSEY &amp; COMPANY</div>
+      <div class="rl-work">The AI Reckoning: How Boards Can Evolve (December 2025)</div>
+      <div class="rl-line">AI-posture model, six board governance actions. The best board-briefing companion for CAIO governance committee design.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">OSTROM, ELINOR</div>
+      <div class="rl-work">Governing the Commons (1990)</div>
+      <div class="rl-line">Polycentric governance — overlapping authority structures outperform centralized control for complex shared resources.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">SENGE, PETER</div>
+      <div class="rl-work">The Fifth Discipline (1990)</div>
+      <div class="rl-line">Systems thinking — the discipline of seeing wholes. Foundation for D6 Strategic Coherence.</div>
+    </div>
+
+
+    <div class="rl-entry">
+      <div class="rl-author">TALEB, NASSIM NICHOLAS</div>
+      <div class="rl-work">Antifragile (2012)</div>
+      <div class="rl-line">Governance that benefits from disorder. The aspiration for D3 Risk Intelligence.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">WORLD ECONOMIC FORUM</div>
+      <div class="rl-work">Advancing Responsible AI Innovation: A Playbook (September 2025)</div>
+      <div class="rl-line">Nine plays for governance design. Strongest 2025 treatment of where governance sits, separating delivery from assurance, and moving from centralized to federated models.</div>
+    </div>
+
+    <div class="rl-entry">
+      <div class="rl-author">ZUBOFF, SHOSHANA</div>
+      <div class="rl-work">The Age of Surveillance Capitalism (2019)</div>
+      <div class="rl-line">Governance implications of data extraction at scale. Why autonomy is a governance question, not a technical one.</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
