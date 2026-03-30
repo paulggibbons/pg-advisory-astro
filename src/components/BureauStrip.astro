@@ -1,0 +1,97 @@
+---
+---
+
+<div class="bureau-strip">
+  <div class="bureau-strip-inner">
+    <span class="bureau-label">Book a Keynote</span>
+    <div class="bureau-logos">
+      <a href="#" class="bureau-item" target="_blank" rel="noopener">
+        <span class="brightsight-logo"><span style="color:#4BB4F1;">BrightSight</span> <span style="color:#E8944A;">speakers</span></span>
+        <span class="bureau-region">North America</span>
+      </a>
+      <span class="bureau-divider">|</span>
+      <a href="https://londonspeakerbureau.com/speaker-profile/paul-gibbons/" class="bureau-item" target="_blank" rel="noopener">
+        <img src="/images/lsb-logo.svg" alt="London Speaker Bureau" class="bureau-logo lsb-logo" />
+        <span class="bureau-region">International</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bureau-strip {
+    background: var(--espresso);
+    border-top: 1px solid rgba(184, 146, 42, 0.15);
+    border-bottom: 1px solid rgba(184, 146, 42, 0.15);
+    padding: 20px 48px;
+  }
+
+  .bureau-strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .bureau-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .bureau-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .bureau-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    transition: opacity 0.3s;
+  }
+
+  .bureau-item:hover { opacity: 0.8; }
+
+  .brightsight-logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .bureau-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .bureau-logo.lsb-logo {
+    height: 28px;
+    filter: brightness(0) invert(1);
+  }
+
+  .bureau-region {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: rgba(245, 240, 232, 0.45);
+  }
+
+  .bureau-divider {
+    color: rgba(184, 146, 42, 0.25);
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (max-width: 900px) {
+    .bureau-strip { padding: 20px 24px; }
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  accent: string;
+}
+
+const { label, title, accent } = Astro.props;
+---
+
+<section class="stub-hero">
+  <div class="stub-hero-inner">
+    <div class="stub-hero-label" style={`color:${accent};`}>{label}</div>
+    <h1 class="stub-hero-title">{title}</h1>
+    <p class="stub-hero-note">Full model card and framework content coming soon.</p>
+  </div>
+</section>
+
+<style>
+  .stub-hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 48px 80px;
+    background: linear-gradient(170deg, var(--espresso) 0%, var(--chocolate) 40%, var(--chocolate-mid) 100%);
+    position: relative;
+  }
+
+  .stub-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .stub-hero-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .stub-hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+
+  .stub-hero-note {
+    font-size: 17px;
+    color: rgba(245, 240, 232, 0.5);
+    font-weight: 300;
+  }
+
+  @media (max-width: 900px) {
+    .stub-hero { padding: 140px 24px 80px; }
+  }
+</style>

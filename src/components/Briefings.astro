@@ -1,0 +1,63 @@
+---
+---
+
+<section class="briefings" id="briefings">
+  <div class="section-inner">
+    <div class="section-label reveal">Executive Intelligence</div>
+    <h2 class="section-headline reveal">Monthly Executive AI Briefings</h2>
+    <div class="briefings-grid">
+      <div class="briefings-text reveal">
+        <p>AI moves faster than your leadership team can track. By the time you've read the latest report, the landscape has shifted again.</p>
+        <p>Each month, I deliver a board-ready briefing on what actually changed in AI, what it means for your industry, and what decisions it forces. No hype, no jargon — just the signal your leadership team needs.</p>
+      </div>
+      <div class="briefings-cta reveal">
+        <a href="#engage" class="btn-primary">Request a Sample Briefing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .briefings {
+    padding: 120px 48px;
+    background: var(--chocolate);
+    position: relative;
+  }
+
+  .briefings::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  .briefings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .briefings-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(245, 240, 232, 0.85);
+    font-weight: 300;
+  }
+
+  .briefings-text p + p { margin-top: 24px; }
+
+  .briefings-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    .briefings { padding: 120px 24px; }
+    .briefings-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>

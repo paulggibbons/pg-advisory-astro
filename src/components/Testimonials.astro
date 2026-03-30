@@ -1,0 +1,117 @@
+---
+const testimonials = [
+  {
+    text: "Paul is one of the most original thinkers in the change space. His work bridges the gap between academic rigor and practical application.",
+    author: "Jeffrey Pfeffer",
+    role: "Professor, Stanford Business School",
+  },
+  {
+    text: "Paul brings a rare combination of intellectual depth and boardroom pragmatism. He challenges assumptions without being contrarian.",
+    author: "Simon Collins",
+    role: "Chairman, KPMG",
+  },
+  {
+    text: "His framework changed how we think about AI adoption — not as a technology rollout, but as a leadership transformation.",
+    author: "Paul Say",
+    role: "VP, HSBC",
+  },
+  {
+    text: "One of the few advisors who truly understands both the human side and the technology side of transformation.",
+    author: "Robert Entenmann",
+    role: "SVP, ABN-Amro",
+  },
+  {
+    text: "Paul's ability to distill complexity into actionable strategy is exceptional. A genuine thought leader.",
+    author: "Tonit Calaway",
+    role: "VP, Harley Davidson",
+  },
+  {
+    text: "His keynote was the highest-rated session at our leadership conference. Provocative, practical, and deeply human.",
+    author: "Patrick Vallance",
+    role: "SVP, GlaxoSmithKline",
+  },
+];
+---
+
+<section class="testimonials">
+  <div class="section-inner">
+    <div class="section-label reveal">What Leaders Say</div>
+    <h2 class="section-headline reveal">Trusted by executives who move organizations</h2>
+  </div>
+  <div class="testimonial-track">
+    {testimonials.map(t => (
+      <div class="testimonial-card">
+        <p class="testimonial-text">&ldquo;{t.text}&rdquo;</p>
+        <div class="testimonial-author">{t.author}</div>
+        <div class="testimonial-role">{t.role}</div>
+      </div>
+    ))}
+    {/* Duplicate for infinite scroll */}
+    {testimonials.slice(0, 3).map(t => (
+      <div class="testimonial-card">
+        <p class="testimonial-text">&ldquo;{t.text}&rdquo;</p>
+        <div class="testimonial-author">{t.author}</div>
+        <div class="testimonial-role">{t.role}</div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 100px 48px;
+    background: var(--chocolate);
+    overflow: hidden;
+  }
+
+  .testimonial-track {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+    animation: scrollTestimonials 30s linear infinite;
+  }
+
+  .testimonial-card {
+    min-width: 400px;
+    max-width: 400px;
+    padding: 40px;
+    border: 1px solid rgba(184, 146, 42, 0.12);
+    background: rgba(184, 146, 42, 0.02);
+    flex-shrink: 0;
+    border-left: 3px solid var(--gold);
+  }
+
+  .testimonial-card:nth-child(4n+1) { border-left-color: var(--accent-blue); }
+  .testimonial-card:nth-child(4n+2) { border-left-color: var(--accent-green); }
+  .testimonial-card:nth-child(4n+3) { border-left-color: var(--accent-purple); }
+  .testimonial-card:nth-child(4n+4) { border-left-color: var(--accent-orange); }
+
+  .testimonial-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .testimonial-author {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .testimonial-role {
+    font-size: 12px;
+    color: rgba(245, 240, 232, 0.6);
+    margin-top: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .testimonials { padding: 100px 24px; }
+  }
+
+  @media (max-width: 640px) {
+    .testimonial-card { min-width: 300px; max-width: 300px; }
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+---
+
+<section class="corpus" id="corpus">
+  <div class="section-inner">
+    <div class="section-label reveal">The Corpus</div>
+    <h2 class="section-headline reveal">What is the Corpus?</h2>
+
+    <div class="corpus-grid">
+      <div class="corpus-text reveal">
+        <p>I've written 5,000 pages in books, whitepapers, and unpublished manuscripts. A year's reading.</p>
+        <p class="corpus-highlight">Or, you can query an LLM trained on everything I've ever written.</p>
+      </div>
+      <div class="corpus-ctas reveal">
+        <a href="/corpus" class="btn-primary">Explore the Corpus</a>
+        <a href="#" class="btn-ghost">Query the AI &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .corpus {
+    padding: 120px 48px;
+    background: var(--chocolate-mid);
+  }
+
+  .corpus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .corpus-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(245, 240, 232, 0.85);
+    font-weight: 300;
+  }
+
+  .corpus-text p + p { margin-top: 24px; }
+
+  .corpus-highlight {
+    font-style: italic;
+    color: #3DCC80;
+    font-size: 19px;
+  }
+
+  .corpus-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    .corpus { padding: 120px 24px; }
+    .corpus-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>

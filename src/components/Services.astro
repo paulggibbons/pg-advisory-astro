@@ -1,0 +1,134 @@
+---
+const services = [
+  {
+    num: '01',
+    accent: 'blue',
+    color: '#5BA3D9',
+    title: 'Fractional CAIO',
+    desc: 'High-level AI expertise without the full-time hire. Strategic leadership across technology, operations, human capital, and ethics.',
+  },
+  {
+    num: '02',
+    accent: 'green',
+    color: '#3DCC80',
+    title: 'Executive AI Productivity',
+    desc: 'Enterprise productivity gains in 3-6 weeks. Coaching, power tools, and workflow automation for senior leaders.',
+  },
+  {
+    num: '03',
+    accent: 'purple',
+    color: '#B07DD6',
+    title: 'Adaptive Adoption Sprints',
+    desc: 'Traditional change management is too slow for AI. A behavioral science approach built for the speed of technology.',
+  },
+];
+---
+
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-label reveal">Advisory Services</div>
+    <h2 class="section-headline reveal">Three ways to work together</h2>
+
+    <div class="services-grid reveal-stagger">
+      {services.map(s => (
+        <div class="service-card" data-accent={s.accent}>
+          <div class="service-icon" style={`color:${s.color};`}>{s.num}</div>
+          <h3 class="service-title">{s.title}</h3>
+          <p class="service-desc">{s.desc}</p>
+          <a href="#" class="service-link" style={`color:${s.color};`}>Learn More &rarr;</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 120px 48px;
+    background: var(--chocolate-mid);
+    position: relative;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 56px;
+  }
+
+  .service-card {
+    background: var(--paper);
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    cursor: default;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-card[data-accent="blue"]::before { background: var(--accent-blue); }
+  .service-card[data-accent="green"]::before { background: var(--accent-green); }
+  .service-card[data-accent="purple"]::before { background: var(--accent-purple); }
+  .service-card[data-accent="orange"]::before { background: var(--accent-orange); }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  .service-icon {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: var(--light);
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .service-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--ink);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .service-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(26, 18, 11, 0.75);
+    font-weight: 300;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--espresso);
+    text-decoration: none;
+    transition: gap 0.3s;
+  }
+
+  .service-link:hover { gap: 14px; }
+
+  @media (max-width: 900px) {
+    .services { padding: 120px 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
