@@ -2,17 +2,18 @@
 interface Props {
   label: string;
   title: string;
+  sub: string;
   accent: string;
 }
 
-const { label, title, accent } = Astro.props;
+const { label, title, sub, accent } = Astro.props;
 ---
 
 <section class="stub-hero">
   <div class="stub-hero-inner">
     <div class="stub-hero-label" style={`color:${accent};`}>{label}</div>
     <h1 class="stub-hero-title">{title}</h1>
-    <p class="stub-hero-note">Full model card and framework content coming soon.</p>
+    <p class="stub-hero-sub">{sub}</p>
   </div>
 </section>
 
@@ -48,10 +49,12 @@ const { label, title, accent } = Astro.props;
     margin-bottom: 24px;
   }
 
-  .stub-hero-note {
-    font-size: 17px;
-    color: rgba(245, 240, 232, 0.5);
+  .stub-hero-sub {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(245, 240, 232, 0.7);
     font-weight: 300;
+    max-width: 600px;
   }
 
   @media (max-width: 900px) {
