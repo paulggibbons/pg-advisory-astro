@@ -1,0 +1,604 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const books = [
+  {
+    title: "Adopting AI: The People-First Approach",
+    subtitle: "Leading the Intelligence Transition",
+    year: 2025,
+    image: "/images/adopting-ai.png",
+    alt: "Adopting AI book cover by Paul Gibbons",
+    description: "AI adoption fails when organizations treat it as a technology rollout rather than a human transition. This book explores what happens when the smartest, strangest colleague you have ever had arrives at work — an intelligence that is unpredictable, opaque, and prone to bias. Paul and co-author Chris Healy present adaptive adoption: a bottom-up, experimental framework with ethics at its center. From boardrooms to courtrooms, laboratories to studios, the book maps AI's applications across contexts while maintaining balance between opportunity and risk throughout the intelligence transition.",
+    buyLink: "https://a.co/d/d3XOSr1",
+    isbn: "",
+  },
+  {
+    title: "The Science of Organizational Change",
+    subtitle: "Grounding Change in Behavioral Science",
+    year: 2015,
+    image: "/images/science-of-org-change.jpg",
+    alt: "The Science of Organizational Change book cover by Paul Gibbons",
+    description: "Paul's best-known work and still selling strongly over a decade after publication. Ranked among the top five change management texts of all time, this book was the first to bring behavioral science to leadership and change. It integrates advances in mindfulness, behavioral economics, sociology, and complexity theory to provide evidence-based guidance for senior executives and change practitioners. The book examines cognitive biases underlying organizational failures from the 2008 financial crisis to Deepwater Horizon, introducing change-agility as the capability organizations need to become disruptors rather than the disrupted.",
+    buyLink: "https://amzn.to/3GRXFls",
+    isbn: "",
+  },
+  {
+    title: "The Future of Change Management",
+    subtitle: "Volume I",
+    year: 2024,
+    image: "/images/future-of-change-mgmt.jpg",
+    alt: "The Future of Change Management book cover edited by Paul Gibbons",
+    description: "An edited volume asking whether 20th-century change management practices remain relevant amid people analytics, AI, neurodiversity, and mental health awareness. Contributions from leading practitioners at Google, Deloitte, and IBM are organized into three sections: Brains and Minds (neurodiversity, neuroscience, mental health), Behaviors (culture change, policy implementation), and Tools (evidence-based approaches, design thinking, people analytics, generative AI). The first of a planned three-volume series addressing frontier topics in contemporary change practice.",
+    buyLink: "https://amzn.to/3wS4qm9",
+    isbn: "",
+  },
+  {
+    title: "Change Myths",
+    subtitle: "Critical Thinking for Change Professionals",
+    year: 2023,
+    image: "/images/change-myths.jpg",
+    alt: "Change Myths book cover by Paul Gibbons and Tricia Kennedy",
+    description: "Co-authored with Tricia Kennedy, this book examines how myths become entrenched in organizational change practice despite contradicting contemporary research. From the debunked left-brain/right-brain creativity model to the Kubler-Ross grief curve inappropriately applied to business transformation, the book investigates why false frameworks persist and how to evaluate change models against current human sciences research. A pioneering application of critical thinking tools for human capital professionals.",
+    buyLink: "https://amzn.to/4atUzSu",
+    isbn: "",
+  },
+  {
+    title: "The Spirituality of Work and Leadership",
+    subtitle: "Humanizing the Business of Leading",
+    year: 2020,
+    image: "/images/spirituality-of-work.jpg",
+    alt: "The Spirituality of Work and Leadership book cover by Paul Gibbons",
+    description: "The most comprehensive scholarly treatment of workplace spirituality to date. This book brings rigor to meaning-making, vocation, purpose, happiness, mindfulness, altruism, motivation, and engagement in organizational life. Drawing on psychology, philosophy, evolutionary biology, sociology, and systems thinking, it examines what spirituality actually is, how it differs from religion, and whether spiritual workplace experiences can be intentionally cultivated. Not self-help. Not woo. The serious evidence-based case for spiritual fit in the workplace.",
+    buyLink: "https://www.amazon.com/Spirituality-Work-Leadership-Humanizing-Business/dp/099765127X/",
+    isbn: "099765127X",
+  },
+  {
+    title: "Brains, Bodies, and Minds",
+    subtitle: "How AI Is Transforming Medicine, Therapy, and Wellness",
+    year: 2026,
+    image: "/images/brains-bodies-minds.jpg",
+    alt: "Brains Bodies and Minds book cover by Paul Gibbons - The Great Collisions Volume 1",
+    description: "The first volume in The Great Collisions series. What happens when the intelligence explosion crashes into human systems? On the front line are doctors, biohackers, GLP-1 medications, wellness influencers, and therapists. This book is a strategic playbook for the revolution currently underway in medicine, therapy, and wellness — exploring whether AI is a good therapist, whether it is a better doctor than yours, what bodily autonomy and libertarian biology mean, and what the wellness-industrial complex gets right and wrong.",
+    buyLink: "https://www.amazon.com/Brains-Bodies-Minds-Transforming-Collisions/dp/B0GDV1FG8R",
+    isbn: "9798990085541",
+  },
+  {
+    title: "Impact",
+    subtitle: "21st-Century Change Tools for Leaders",
+    year: 2020,
+    image: "/images/impact.jpg",
+    alt: "Impact book cover by Paul Gibbons",
+    description: "With only 25 percent of digital transformations succeeding, leaders need current change methodologies grounded in behavioral science, complexity theory, agile methods, and information science. As workplaces become technologically advanced through AI and robotics, community, purpose, connection, empathy, relationships, and trust all gain significance. This book positions leadership as central to humanizing business and upskilling workforces, examining how understanding contemporary research and leveraging 21st-century learning technologies enables faster, more effective capability building.",
+    buyLink: "https://amzn.to/47asSuX",
+    isbn: "",
+  },
+];
+
+const collisions = [
+  { title: "Brains, Bodies, Minds", volume: "I", status: "available", link: "https://www.amazon.com/Brains-Bodies-Minds-Transforming-Collisions/dp/B0GDV1FG8R" },
+  { title: "Intelligent Enterprises", volume: "II", status: "in-progress", link: null },
+  { title: "Trustless Markets", volume: "III", status: "in-progress", link: null },
+  { title: "Intelligence Frontiers", volume: "IV", status: "in-progress", link: null },
+  { title: "Scientific Revolutions", volume: "V", status: "planned", link: null },
+];
+---
+
+<Base
+  title="Publications — Books and Whitepapers by Paul Gibbons"
+  description="Books and whitepapers by Paul Gibbons — spanning leadership, organizational change, behavioral science, markets, AI adoption, and applied ethics. Eight published books and original research frameworks."
+>
+  <Nav />
+
+  <!-- Schema markup for books -->
+  {books.map(book => (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": book.title,
+      "author": { "@type": "Person", "name": "Paul Gibbons" },
+      "datePublished": String(book.year),
+      "description": book.description,
+      "image": `https://pg-advisory-astro.vercel.app${book.image}`,
+      "url": book.buyLink,
+      ...(book.isbn ? { "isbn": book.isbn } : {}),
+    })} />
+  ))}
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1: HERO
+  ═══════════════════════════════════════════ -->
+  <section class="pub-hero">
+    <div class="pub-hero-bg"></div>
+    <div class="pub-hero-content">
+      <h1 class="pub-hero-title">Publications</h1>
+      <p class="pub-hero-tagline">Some go deep. Some go wide. I go both.</p>
+      <p class="pub-hero-spanning">Eight books spanning leadership, organizational change, behavioral science, markets and risk, AI adoption, and applied ethics.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: BOOKS
+  ═══════════════════════════════════════════ -->
+  <section class="pub-books" id="books">
+    <div class="pub-books-inner">
+      <div class="section-label">Books</div>
+
+      {books.map((book, i) => (
+        <article class={`pub-book-entry reveal ${i > 0 ? 'pub-book-border' : ''}`}>
+          <div class="pub-book-cover">
+            <img src={book.image} alt={book.alt} loading="lazy" />
+          </div>
+          <div class="pub-book-info">
+            <h2 class="pub-book-title">{book.title}</h2>
+            {book.subtitle && <p class="pub-book-subtitle">{book.subtitle}</p>}
+            <span class="pub-book-year">{book.year}</span>
+            <p class="pub-book-desc">{book.description}</p>
+            <a href={book.buyLink} class="pub-book-buy" target="_blank" rel="noopener noreferrer">Buy the book &rarr;</a>
+          </div>
+        </article>
+      ))}
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: THE GREAT COLLISIONS
+  ═══════════════════════════════════════════ -->
+  <section class="pub-collisions" id="great-collisions">
+    <div class="pub-collisions-inner">
+      <div class="section-label" style="text-align:center;">Coming Soon</div>
+      <h2 class="pub-collisions-headline">The Great Collisions of 2026</h2>
+
+      <div class="pub-collisions-grid">
+        {collisions.map(vol => (
+          <div class={`pub-collision-card ${vol.status}`}>
+            <div class="pub-collision-vol">Volume {vol.volume}</div>
+            <h3 class="pub-collision-title">{vol.title}</h3>
+            <span class={`pub-collision-badge ${vol.status}`}>
+              {vol.status === 'available' ? 'Available' : vol.status === 'in-progress' ? 'In progress' : 'Planned'}
+            </span>
+            {vol.link && <a href={vol.link} class="pub-collision-link" target="_blank" rel="noopener noreferrer">Buy &rarr;</a>}
+          </div>
+        ))}
+      </div>
+
+      <p class="pub-collisions-desc">A five-volume series exploring the collisions reshaping the world — where AI meets medicine, organizations meet intelligence, markets meet geopolitics, consciousness meets computation, and science meets its own boundaries.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: WHITEPAPERS AND FRAMEWORKS
+  ═══════════════════════════════════════════ -->
+  <section class="pub-whitepapers" id="whitepapers">
+    <div class="pub-whitepapers-inner">
+      <div class="section-label">Whitepapers and Frameworks</div>
+
+      <div class="pub-wp-grid">
+
+        <div class="pub-wp-card reveal">
+          <span class="pub-wp-type">Whitepaper</span>
+          <h3 class="pub-wp-title">Solve for Trust</h3>
+          <p class="pub-wp-desc">Why trust is infrastructure, not sentiment — and how to build it in AI-era organizations.</p>
+          <span class="pub-wp-status coming-soon">Coming soon</span>
+        </div>
+
+        <div class="pub-wp-card reveal">
+          <span class="pub-wp-type">Framework</span>
+          <h3 class="pub-wp-title">The Adaptive Adoption Framework</h3>
+          <p class="pub-wp-desc">A bottom-up, ethics-centered framework for adopting AI at the speed of organizational reality.</p>
+          <span class="pub-wp-status coming-soon">Coming soon</span>
+        </div>
+
+        <div class="pub-wp-card reveal">
+          <span class="pub-wp-type">Whitepaper</span>
+          <h3 class="pub-wp-title">The Leadership Delta</h3>
+          <p class="pub-wp-desc">Seven dimensions of leadership capability for the AI age.</p>
+          <a href="#" class="pub-wp-cta">Download PDF &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <Footer />
+</Base>
+
+
+<!-- ═══════════════════════════════════════════
+     SCOPED STYLES
+═══════════════════════════════════════════ -->
+<style>
+  /* ── HERO ── */
+  .pub-hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 160px 48px 80px;
+  }
+
+  .pub-hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(60, 40, 20, 0.5), transparent),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(184, 146, 42, 0.05), transparent),
+      linear-gradient(170deg, var(--espresso) 0%, var(--chocolate) 40%, var(--chocolate-mid) 100%);
+    z-index: 0;
+  }
+
+  .pub-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .pub-hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards 0.3s;
+  }
+
+  .pub-hero-tagline {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.2vw, 26px);
+    color: var(--gold);
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.5s;
+  }
+
+  .pub-hero-spanning {
+    font-size: 17px;
+    color: rgba(245, 240, 232, 0.6);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.7s;
+  }
+
+  @media (max-width: 640px) {
+    .pub-hero { padding: 140px 24px 60px; }
+  }
+
+
+  /* ── BOOKS ── */
+  .pub-books {
+    padding: 100px 48px;
+    background: var(--chocolate-mid);
+  }
+
+  .pub-books-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .pub-book-entry {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    padding: 48px 0;
+    align-items: start;
+  }
+
+  .pub-book-border {
+    border-top: 1px solid rgba(184, 146, 42, 0.12);
+  }
+
+  .pub-book-cover {
+    position: relative;
+  }
+
+  .pub-book-cover img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .pub-book-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(24px, 2.5vw, 32px);
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .pub-book-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  .pub-book-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: rgba(245, 240, 232, 0.35);
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .pub-book-desc {
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(245, 240, 232, 0.7);
+    margin-bottom: 20px;
+  }
+
+  .pub-book-buy {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184, 146, 42, 0.3);
+    padding-bottom: 4px;
+    transition: border-color 0.3s, color 0.3s;
+  }
+
+  .pub-book-buy:hover {
+    color: var(--cream);
+    border-color: var(--cream);
+  }
+
+  @media (max-width: 700px) {
+    .pub-book-entry {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .pub-book-cover img {
+      max-width: 200px;
+    }
+    .pub-books { padding: 80px 24px; }
+  }
+
+
+  /* ── GREAT COLLISIONS ── */
+  .pub-collisions {
+    padding: 100px 48px;
+    background: var(--espresso);
+    border-top: 1px solid rgba(184, 146, 42, 0.08);
+    border-bottom: 1px solid rgba(184, 146, 42, 0.08);
+  }
+
+  .pub-collisions-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pub-collisions-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    color: var(--cream);
+    margin-bottom: 48px;
+  }
+
+  .pub-collisions-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .pub-collision-card {
+    background: rgba(44, 30, 20, 0.8);
+    border: 1px solid rgba(184, 146, 42, 0.12);
+    border-radius: 8px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: border-color 0.3s;
+  }
+
+  .pub-collision-card.available {
+    border-color: rgba(184, 146, 42, 0.35);
+  }
+
+  .pub-collision-card:hover {
+    border-color: rgba(184, 146, 42, 0.4);
+  }
+
+  .pub-collision-vol {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(245, 240, 232, 0.3);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .pub-collision-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 12px;
+    min-height: 42px;
+  }
+
+  .pub-collision-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .pub-collision-badge.available {
+    color: var(--gold);
+    border: 0.5px solid rgba(184, 146, 42, 0.3);
+    background: rgba(184, 146, 42, 0.08);
+  }
+
+  .pub-collision-badge.in-progress {
+    color: rgba(245, 240, 232, 0.4);
+    border: 0.5px solid rgba(245, 240, 232, 0.1);
+    background: rgba(245, 240, 232, 0.03);
+  }
+
+  .pub-collision-badge.planned {
+    color: rgba(245, 240, 232, 0.25);
+    border: 0.5px solid rgba(245, 240, 232, 0.06);
+    background: transparent;
+  }
+
+  .pub-collision-link {
+    display: block;
+    margin-top: 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .pub-collision-link:hover {
+    color: var(--cream);
+  }
+
+  .pub-collisions-desc {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(15px, 1.6vw, 18px);
+    color: rgba(245, 240, 232, 0.5);
+    line-height: 1.65;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 700px) {
+    .pub-collisions-grid { grid-template-columns: repeat(2, 1fr); }
+    .pub-collisions { padding: 80px 24px; }
+  }
+
+  @media (max-width: 480px) {
+    .pub-collisions-grid { grid-template-columns: 1fr; }
+  }
+
+
+  /* ── WHITEPAPERS ── */
+  .pub-whitepapers {
+    padding: 100px 48px;
+    background: var(--chocolate-mid);
+  }
+
+  .pub-whitepapers-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .pub-wp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .pub-wp-card {
+    background: rgba(26, 18, 11, 0.6);
+    border: 1px solid rgba(184, 146, 42, 0.1);
+    border-radius: 8px;
+    padding: 32px 28px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .pub-wp-card:hover {
+    border-color: rgba(184, 146, 42, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .pub-wp-type {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .pub-wp-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--cream);
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .pub-wp-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(245, 240, 232, 0.55);
+    margin-bottom: 20px;
+  }
+
+  .pub-wp-status {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .pub-wp-status.coming-soon {
+    color: rgba(245, 240, 232, 0.4);
+    border: 0.5px solid rgba(245, 240, 232, 0.1);
+    background: rgba(245, 240, 232, 0.03);
+  }
+
+  .pub-wp-cta {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184, 146, 42, 0.3);
+    padding-bottom: 4px;
+    transition: border-color 0.3s, color 0.3s;
+  }
+
+  .pub-wp-cta:hover {
+    color: var(--cream);
+    border-color: var(--cream);
+  }
+
+  @media (max-width: 800px) {
+    .pub-wp-grid { grid-template-columns: repeat(2, 1fr); }
+    .pub-whitepapers { padding: 80px 24px; }
+  }
+
+  @media (max-width: 520px) {
+    .pub-wp-grid { grid-template-columns: 1fr; }
+  }
+</style>

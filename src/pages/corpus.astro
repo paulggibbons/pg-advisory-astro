@@ -1,0 +1,1073 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Base
+  title="The Corpus — Query 30 Years of Thinking | Paul Gibbons Advisory"
+  description="Most AI is trained on the internet. This one was trained on Paul Gibbons — 8 books, 30 years of research, unpublished work. Ask hard questions. Get cited answers."
+>
+  <Nav />
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1: HERO
+  ═══════════════════════════════════════════ -->
+  <section class="corpus-hero" id="corpus-top">
+    <div class="corpus-hero-bg"></div>
+    <div class="corpus-hero-content">
+      <h1 class="corpus-hero-title">The Corpus</h1>
+      <div class="corpus-hero-quotes">
+        <p>Change is inevitable — whether it represents progress is up to us.</p>
+        <p>The world is full of questions that matter. It is also full of internet noise.</p>
+        <p>Most AI is trained on the internet. This one was trained on me.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: SCROLLING QUESTION SHOWCASE
+  ═══════════════════════════════════════════ -->
+  <section class="corpus-questions" id="questions">
+    <div class="questions-track" id="questions-track">
+      <div class="question-chip" data-question="What, in large language models, &quot;bakes in&quot; ethical challenges?">What, in large language models, "bakes in" ethical challenges?</div>
+      <div class="question-chip" data-question="How does the psychology of risk skew board decisions — and how did it bring about the global financial crisis?">How does the psychology of risk skew board decisions — and how did it bring about the global financial crisis?</div>
+      <div class="question-chip" data-question="How might the economics of AI affect the liberal international order that peaked during the Blair-Clinton years?">How might the economics of AI affect the liberal international order that peaked during the Blair-Clinton years?</div>
+      <div class="question-chip" data-question="How are cognitive biases a factor in both organizational change and internet slop?">How are cognitive biases a factor in both organizational change and internet slop?</div>
+      <div class="question-chip" data-question="What do most businesses get wrong about AI adoption?">What do most businesses get wrong about AI adoption?</div>
+      <div class="question-chip" data-question="Why do some doctors call GLP-1s &quot;the first true longevity drug?&quot;">Why do some doctors call GLP-1s "the first true longevity drug?"</div>
+      <div class="question-chip" data-question="Where is Paul Gibbons wrong?">Where is Paul Gibbons wrong?</div>
+      <div class="question-chip" data-question="What is the link between information disorder and organizational culture?">What is the link between information disorder and organizational culture?</div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="question-chip" data-question="What, in large language models, &quot;bakes in&quot; ethical challenges?">What, in large language models, "bakes in" ethical challenges?</div>
+      <div class="question-chip" data-question="How does the psychology of risk skew board decisions — and how did it bring about the global financial crisis?">How does the psychology of risk skew board decisions — and how did it bring about the global financial crisis?</div>
+      <div class="question-chip" data-question="How might the economics of AI affect the liberal international order that peaked during the Blair-Clinton years?">How might the economics of AI affect the liberal international order that peaked during the Blair-Clinton years?</div>
+      <div class="question-chip" data-question="How are cognitive biases a factor in both organizational change and internet slop?">How are cognitive biases a factor in both organizational change and internet slop?</div>
+      <div class="question-chip" data-question="What do most businesses get wrong about AI adoption?">What do most businesses get wrong about AI adoption?</div>
+      <div class="question-chip" data-question="Why do some doctors call GLP-1s &quot;the first true longevity drug?&quot;">Why do some doctors call GLP-1s "the first true longevity drug?"</div>
+      <div class="question-chip" data-question="Where is Paul Gibbons wrong?">Where is Paul Gibbons wrong?</div>
+      <div class="question-chip" data-question="What is the link between information disorder and organizational culture?">What is the link between information disorder and organizational culture?</div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: THE CHAT BOX
+  ═══════════════════════════════════════════ -->
+  <section class="corpus-chat" id="chatbox">
+    <div class="corpus-chat-inner">
+      <div class="chat-header">
+        <h2>Ask anything.</h2>
+        <p>Answers are drawn from 8 published books, 2 unpublished manuscripts, 5 works in progress, and 50 articles. Sources cited in every response.</p>
+      </div>
+
+      <!-- Sample question carousel -->
+      <div class="chat-carousel">
+        <button class="chat-carousel-arrow prev" id="carousel-prev" aria-label="Previous prompts">&#8249;</button>
+        <div class="chat-carousel-track" id="carousel-track"></div>
+        <button class="chat-carousel-arrow next" id="carousel-next" aria-label="Next prompts">&#8250;</button>
+      </div>
+
+      <!-- Chat interface -->
+      <div class="chat-box">
+        <div class="chat-messages" id="chatbox-messages">
+          <div class="chat-empty" id="chatbox-empty">
+            <p>Ask a question about leadership, change, AI adoption, or anything in the work. Every answer is grounded in the source material.</p>
+          </div>
+        </div>
+        <div class="chat-input-row">
+          <input class="chat-input" id="chatbox-input" type="text" placeholder="Ask the Corpus anything..." aria-label="Type your question">
+          <button class="chat-send" id="chatbox-send" aria-label="Send">&#10140;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: WHY THIS EXISTS
+  ═══════════════════════════════════════════ -->
+  <section class="corpus-why" id="why">
+    <div class="corpus-why-inner">
+
+      <div class="corpus-why-block">
+        <div class="section-label">The Personal Story</div>
+        <h2 class="corpus-section-headline accent-green">I'm Client Zero</h2>
+        <div class="corpus-body-text">
+          <p>When I started giving talks on AI in 2017, it was theory. Theory helps but doesn't solve business problems. I wanted to feel the same pain my clients feel — building something real with my own hands. One person. No team. No engineering degree. No budget. The pipeline, the chunking, the embeddings, the query layer — built using Claude, from scratch, in a few weekends. The engineering isn't a footnote. It is the argument.</p>
+        </div>
+      </div>
+
+      <div class="corpus-why-block">
+        <div class="section-label">The Problem It Solves</div>
+        <h2 class="corpus-section-headline accent-blue">The Internet Is an Averaging Machine</h2>
+        <div class="corpus-body-text">
+          <p>Ask any AI about organizational change and you get the consensus. The SEO-optimized. The algorithmically safe. The Corpus draws on a body of scholarship with a 30-year evidence base, peer-reviewed foundations, and a documented intellectual lineage — positions taken, defended, and revised in public, across eight books and dozens of white papers. Not the average of what everyone thinks. What one person has argued, tested, and staked their reputation on.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5: ASK THE HARD QUESTION
+  ═══════════════════════════════════════════ -->
+  <section class="corpus-hard-questions" id="hard-questions">
+    <div class="corpus-hard-inner">
+      <div class="section-label">What You Can Do Here</div>
+      <h2 class="corpus-section-headline accent-purple">Ask the Hard Questions</h2>
+      <div class="corpus-body-text">
+        <p>To get to grips with an author, you buy their books, spend hours reading them, or use the index and hope your interests are covered. Across eight books and dozens of papers, that is an oppressive and expensive project.</p>
+        <p>In the Corpus, you can ask:</p>
+        <ul class="corpus-question-list">
+          <li>Does Paul actually have evidence for his claims about culture change?</li>
+          <li>How does Adaptive Adoption differ from Kotter — and why does it matter?</li>
+          <li>What is the link between information disorder and organizational culture?</li>
+          <li>Where is he wrong?</li>
+        </ul>
+        <p><strong>Real interrogation. Cited sources. No puffery. A library that talks back.</strong></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6: FLORIDI CLAIM BLOCK
+  ═══════════════════════════════════════════ -->
+  <section class="corpus-floridi" id="floridi">
+    <div class="corpus-floridi-inner">
+      <blockquote class="corpus-floridi-quote">
+        <p>As of March 2026, Luciano Floridi — one of the most cited philosophers of information — is the only comparable public intellectual to have made a substantial body of work queryable through a dedicated AI interface.</p>
+        <p class="corpus-floridi-distinction">This is the first in the management and leadership disciplines.<br>And the first built by the author himself.</p>
+      </blockquote>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 7: SYSTEM ARCHITECTURE
+  ═══════════════════════════════════════════ -->
+  <section class="corpus-architecture" id="architecture">
+    <div class="corpus-arch-inner">
+      <div class="section-label" style="text-align:center;">System Architecture</div>
+      <h2 class="corpus-section-headline" style="text-align:center; margin-left:auto; margin-right:auto;">How the Corpus Thinks</h2>
+
+      <div class="arch-pipeline">
+        <!-- COL 1: CORPUS -->
+        <div class="arch-col">
+          <div class="arch-col-label">Corpus</div>
+          <p class="arch-col-desc">What goes in — 8 books, manuscripts, articles, white papers, and unpublished work.</p>
+          <div class="arch-node source"><div class="arch-node-glow"></div><div class="arch-node-icon">BOOKS</div><div class="arch-node-name">8 Published Books</div><div class="arch-node-sub">30 years of research, frameworks and evidence</div><span class="arch-stat green">live</span></div>
+          <div class="arch-node source"><div class="arch-node-glow"></div><div class="arch-node-icon">UNPUBLISHED</div><div class="arch-node-name">The Great Collisions</div><div class="arch-node-sub">2 volumes. Nowhere else on the internet.</div><span class="arch-stat green">live</span></div>
+          <div class="arch-node source"><div class="arch-node-glow"></div><div class="arch-node-icon">GITHUB</div><div class="arch-node-name">Adaptive Adoption</div><div class="arch-node-sub">Living framework repo, versioned and growing</div><span class="arch-stat amber">v2.0</span></div>
+          <div class="arch-node source"><div class="arch-node-glow"></div><div class="arch-node-icon">ESSAYS</div><div class="arch-node-name">Substack and Talks</div><div class="arch-node-sub">Long-form thinking, keynote transcripts</div><span class="arch-stat amber">v2.0</span></div>
+        </div>
+
+        <!-- ARROW 1 -->
+        <div class="arch-arrow-col">
+          <svg width="38" height="16" viewBox="0 0 38 16" fill="none"><line x1="2" y1="8" x2="32" y2="8" stroke="rgba(70,190,100,0.22)" stroke-width="1"/><polyline points="26,4 32,8 26,12" stroke="rgba(80,210,110,0.4)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle r="2.2" fill="rgba(80,215,110,0.9)" class="arch-dot1" style="offset-path:path('M 2 8 L 32 8');"/><circle r="2.2" fill="rgba(80,215,110,0.9)" class="arch-dot2" style="offset-path:path('M 2 8 L 32 8');"/><circle r="2.2" fill="rgba(80,215,110,0.9)" class="arch-dot3" style="offset-path:path('M 2 8 L 32 8');"/></svg>
+        </div>
+
+        <!-- COL 2: PROCESSING -->
+        <div class="arch-col">
+          <div class="arch-col-label">Processing</div>
+          <p class="arch-col-desc">How text is chunked, embedded, and indexed for semantic search.</p>
+          <div class="arch-node process"><div class="arch-node-glow"></div><div class="arch-node-icon">CHUNKER</div><div class="arch-node-name">agent-chunker.py</div><div class="arch-node-sub">Semantic chunking by argument structure</div><span class="arch-stat amber">running</span></div>
+          <div class="arch-node process"><div class="arch-node-glow"></div><div class="arch-node-icon">EMBEDDINGS</div><div class="arch-node-name">OpenAI Ada</div><div class="arch-node-sub">1,536-dim vector per chunk</div><span class="arch-stat amber">live</span></div>
+          <div class="arch-node process"><div class="arch-node-glow"></div><div class="arch-node-icon">DATABASE</div><div class="arch-node-name">Supabase pgvector</div><div class="arch-node-sub">paulgpt_chunks 1,010+ chunks stored</div><span class="arch-stat amber">live</span></div>
+        </div>
+
+        <!-- ARROW 2 -->
+        <div class="arch-arrow-col">
+          <svg width="38" height="16" viewBox="0 0 38 16" fill="none"><line x1="2" y1="8" x2="32" y2="8" stroke="rgba(210,160,50,0.22)" stroke-width="1"/><polyline points="26,4 32,8 26,12" stroke="rgba(235,180,65,0.4)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle r="2.2" fill="rgba(240,188,68,0.9)" class="arch-dot1" style="offset-path:path('M 2 8 L 32 8');"/><circle r="2.2" fill="rgba(240,188,68,0.9)" class="arch-dot2" style="offset-path:path('M 2 8 L 32 8');"/><circle r="2.2" fill="rgba(240,188,68,0.9)" class="arch-dot3" style="offset-path:path('M 2 8 L 32 8');"/></svg>
+        </div>
+
+        <!-- COL 3: RETRIEVAL -->
+        <div class="arch-col">
+          <div class="arch-col-label">Retrieval</div>
+          <p class="arch-col-desc">How the system finds the most relevant passages for your question.</p>
+          <div class="arch-node retrieve"><div class="arch-node-glow"></div><div class="arch-node-icon">QUERY</div><div class="arch-node-name">Semantic Search</div><div class="arch-node-sub">Question to vector embedding in real time</div><span class="arch-stat blue">cosine similarity</span></div>
+          <div class="arch-node retrieve"><div class="arch-node-glow"></div><div class="arch-node-icon">MATCH</div><div class="arch-node-name">Top-k Chunks</div><div class="arch-node-sub">Most relevant passages ranked by relevance</div><span class="arch-stat blue">k = 8</span></div>
+          <div class="arch-node retrieve"><div class="arch-node-glow"></div><div class="arch-node-icon">VERCEL</div><div class="arch-node-name">Query Layer</div><div class="arch-node-sub">Serverless function, API key protected</div><span class="arch-stat blue">live</span></div>
+        </div>
+
+        <!-- ARROW 3 -->
+        <div class="arch-arrow-col">
+          <svg width="38" height="16" viewBox="0 0 38 16" fill="none"><line x1="2" y1="8" x2="32" y2="8" stroke="rgba(80,130,220,0.22)" stroke-width="1"/><polyline points="26,4 32,8 26,12" stroke="rgba(105,158,248,0.4)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle r="2.2" fill="rgba(108,162,252,0.9)" class="arch-dot1" style="offset-path:path('M 2 8 L 32 8');"/><circle r="2.2" fill="rgba(108,162,252,0.9)" class="arch-dot2" style="offset-path:path('M 2 8 L 32 8');"/><circle r="2.2" fill="rgba(108,162,252,0.9)" class="arch-dot3" style="offset-path:path('M 2 8 L 32 8');"/></svg>
+        </div>
+
+        <!-- COL 4: RESPONSE -->
+        <div class="arch-col">
+          <div class="arch-col-label">Response</div>
+          <p class="arch-col-desc">How Claude synthesizes an answer grounded in the source material.</p>
+          <div class="arch-node respond"><div class="arch-node-glow"></div><div class="arch-node-icon">CLAUDE API</div><div class="arch-node-name">Anthropic Claude</div><div class="arch-node-sub">Chunks + system prompt = grounded answer</div><span class="arch-stat purple">Sonnet 4</span></div>
+          <div class="arch-node respond"><div class="arch-node-glow"></div><div class="arch-node-icon">CITATIONS</div><div class="arch-node-name">Source Attribution</div><div class="arch-node-sub">Every answer names its book sources</div><span class="arch-stat purple">v1.0</span></div>
+          <div class="arch-node respond"><div class="arch-node-glow"></div><div class="arch-node-icon">INTERFACE</div><div class="arch-node-name">The Chatbox</div><div class="arch-node-sub">paulgibbonsadvisory.com embedded via Vercel</div><span class="arch-stat purple">live</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 8: FOOTER
+  ═══════════════════════════════════════════ -->
+  <Footer />
+
+  <!-- Floating CTA: Test Drive the Corpus -->
+  <div class="corpus-float-cta" id="float-cta">
+    <span class="corpus-float-text">1,010 PASSAGES &middot; 8 BOOKS &middot; CITED ANSWERS</span>
+    <a href="#chatbox" class="corpus-float-btn" id="float-cta-btn">TEST DRIVE THE CORPUS &rarr;</a>
+  </div>
+</Base>
+
+
+<!-- ═══════════════════════════════════════════
+     SCOPED STYLES
+═══════════════════════════════════════════ -->
+<style>
+  /* ── SECTION 1: HERO ── */
+  .corpus-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 160px 48px 80px;
+  }
+
+  .corpus-hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(60, 40, 20, 0.5), transparent),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(184, 146, 42, 0.05), transparent),
+      linear-gradient(170deg, var(--espresso) 0%, var(--chocolate) 40%, var(--chocolate-mid) 100%);
+    z-index: 0;
+  }
+
+  .corpus-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .corpus-hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards 0.3s;
+  }
+
+  .corpus-hero-quotes {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.6s;
+  }
+
+  .corpus-hero-quotes p {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(16px, 2vw, 22px);
+    color: var(--gold);
+    line-height: 1.6;
+    margin-bottom: 8px;
+    opacity: 0.85;
+  }
+
+  @media (max-width: 640px) {
+    .corpus-hero { padding: 140px 24px 60px; }
+  }
+
+
+  /* ── SECTION 2: SCROLLING QUESTIONS ── */
+  .corpus-questions {
+    background: linear-gradient(var(--chocolate-mid), var(--chocolate));
+    padding: 48px 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(184, 146, 42, 0.08);
+  }
+
+  .questions-track {
+    display: flex;
+    gap: 16px;
+    animation: scrollQuestions 60s linear infinite;
+    width: max-content;
+  }
+
+  .questions-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scrollQuestions {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .question-chip {
+    flex-shrink: 0;
+    padding: 16px 24px;
+    border: 1px solid rgba(184, 146, 42, 0.25);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: rgba(245, 240, 232, 0.8);
+    cursor: pointer;
+    transition: border-color 0.3s, background 0.3s, color 0.3s;
+    max-width: 380px;
+    line-height: 1.5;
+    background: rgba(26, 18, 11, 0.4);
+  }
+
+  .question-chip:hover {
+    border-color: var(--gold);
+    background: rgba(184, 146, 42, 0.1);
+    color: var(--cream);
+  }
+
+
+  /* ── SECTION 3: CHAT BOX ── */
+  .corpus-chat {
+    padding: 80px 48px 100px;
+    background: var(--chocolate);
+  }
+
+  .corpus-chat-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .chat-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .chat-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .chat-header p {
+    font-size: 14px;
+    color: rgba(245, 240, 232, 0.5);
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* Carousel */
+  .chat-carousel {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 0 40px;
+    overflow: hidden;
+  }
+
+  .chat-carousel-track {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.4s ease;
+  }
+
+  .chat-carousel-prompt {
+    flex: 0 0 calc(33.333% - 8px);
+    background: rgba(184, 146, 42, 0.08);
+    border: 1px solid rgba(184, 146, 42, 0.2);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: rgba(245, 240, 232, 0.75);
+    cursor: pointer;
+    transition: border-color 0.25s, background 0.25s, color 0.25s;
+    line-height: 1.5;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 700px) {
+    .chat-carousel-prompt { flex: 0 0 calc(100% - 4px); }
+  }
+
+  .chat-carousel-prompt:hover {
+    border-color: var(--gold);
+    background: rgba(184, 146, 42, 0.15);
+    color: var(--cream);
+  }
+
+  .chat-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(44, 30, 20, 0.9);
+    border: 1px solid rgba(184, 146, 42, 0.2);
+    color: rgba(245, 240, 232, 0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: border-color 0.2s, color 0.2s;
+    z-index: 2;
+  }
+
+  .chat-carousel-arrow:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .chat-carousel-arrow.prev { left: 0; }
+  .chat-carousel-arrow.next { right: 0; }
+
+  /* Chat box — HIGH VISUAL CONTRAST per spec */
+  .chat-box {
+    background: var(--warm-white);
+    border: 1px solid rgba(184, 146, 42, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(184, 146, 42, 0.08);
+  }
+
+  .chat-messages {
+    min-height: 300px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background: var(--warm-white);
+  }
+
+  .chat-empty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .chat-empty p {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--mid);
+    max-width: 400px;
+    line-height: 1.6;
+  }
+
+  /* Message bubbles — on light background */
+  .msg {
+    margin-bottom: 16px;
+    max-width: 85%;
+    animation: msgIn 0.3s ease-out;
+  }
+
+  @keyframes msgIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .msg-user {
+    align-self: flex-end;
+    background: rgba(184, 146, 42, 0.12);
+    border: 1px solid rgba(184, 146, 42, 0.25);
+    border-radius: 12px 12px 2px 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  .msg-bot {
+    align-self: flex-start;
+    background: var(--paper);
+    border: 1px solid rgba(107, 101, 96, 0.15);
+    border-radius: 12px 12px 12px 2px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.7;
+  }
+
+  .msg-bot .msg-sources {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(107, 101, 96, 0.12);
+    font-size: 11px;
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  .msg-typing {
+    align-self: flex-start;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .chat-input-row {
+    display: flex;
+    border-top: 1px solid rgba(107, 101, 96, 0.12);
+    background: #fff;
+  }
+
+  .chat-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 16px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+  }
+
+  .chat-input::placeholder {
+    color: var(--mid);
+    opacity: 0.6;
+  }
+
+  .chat-send {
+    background: transparent;
+    border: none;
+    padding: 16px 20px;
+    color: var(--gold);
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .chat-send:hover {
+    color: var(--espresso);
+  }
+
+  @media (max-width: 640px) {
+    .corpus-chat { padding: 60px 24px 80px; }
+  }
+
+
+  /* ── SECTION 4: WHY THIS EXISTS ── */
+  .corpus-why {
+    padding: 100px 48px;
+    background: var(--chocolate-mid);
+  }
+
+  .corpus-why-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .corpus-why-block {
+    margin-bottom: 80px;
+  }
+
+  .corpus-why-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .corpus-section-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    line-height: 1.15;
+    color: var(--cream);
+    margin-bottom: 28px;
+  }
+
+  .corpus-section-headline.accent-green { color: var(--accent-green); }
+  .corpus-section-headline.accent-blue { color: var(--accent-blue); }
+  .corpus-section-headline.accent-purple { color: var(--accent-purple); }
+
+  .corpus-body-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(245, 240, 232, 0.75);
+    margin-bottom: 20px;
+  }
+
+  .corpus-body-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .corpus-body-text strong {
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  .corpus-body-text em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .corpus-why { padding: 80px 24px; }
+  }
+
+
+  /* ── SECTION 5: ASK THE HARD QUESTION ── */
+  .corpus-hard-questions {
+    padding: 0 48px 100px;
+    background: var(--chocolate-mid);
+  }
+
+  .corpus-hard-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .corpus-question-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 24px 0;
+  }
+
+  .corpus-question-list li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(245, 240, 232, 0.65);
+    padding: 8px 0 8px 24px;
+    position: relative;
+    font-style: italic;
+  }
+
+  .corpus-question-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 8px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  @media (max-width: 640px) {
+    .corpus-hard-questions { padding: 0 24px 80px; }
+  }
+
+
+  /* ── SECTION 6: FLORIDI CLAIM ── */
+  .corpus-floridi {
+    padding: 100px 48px;
+    background: linear-gradient(var(--espresso), var(--chocolate));
+    border-top: 1px solid rgba(184, 146, 42, 0.08);
+    border-bottom: 1px solid rgba(184, 146, 42, 0.08);
+  }
+
+  .corpus-floridi-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .corpus-floridi-quote {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .corpus-floridi-quote p {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(16px, 2vw, 20px);
+    color: rgba(245, 240, 232, 0.7);
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .corpus-floridi-quote p.corpus-floridi-distinction {
+    font-size: clamp(18px, 2.2vw, 24px);
+    color: var(--gold);
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 640px) {
+    .corpus-floridi { padding: 80px 24px; }
+  }
+
+
+  /* ── SECTION 7: ARCHITECTURE ── */
+  .corpus-architecture {
+    padding: 100px 48px;
+    background: var(--espresso);
+    border-bottom: 1px solid rgba(184, 146, 42, 0.08);
+  }
+
+  .corpus-arch-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .arch-pipeline {
+    display: grid;
+    grid-template-columns: 1fr 38px 1fr 38px 1fr 38px 1fr;
+    align-items: start;
+    gap: 0;
+    margin-top: 48px;
+  }
+
+  @media (max-width: 900px) {
+    .arch-pipeline { grid-template-columns: 1fr; gap: 16px; }
+    .arch-arrow-col { display: none; }
+  }
+
+  .arch-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arch-col-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(184, 146, 42, 0.65);
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 0.5px solid rgba(184, 146, 42, 0.2);
+  }
+
+  .arch-col-desc {
+    font-size: 12px;
+    color: rgba(245, 240, 232, 0.4);
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .arch-node {
+    font-family: 'DM Sans', sans-serif;
+    background: rgba(44, 30, 20, 0.95);
+    border: 1px solid rgba(184, 146, 42, 0.15);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .arch-node:hover { background: rgba(60, 40, 25, 0.98); }
+  .arch-node:hover .arch-node-glow { opacity: 1; }
+
+  .arch-node-glow {
+    position: absolute; inset: -1px; border-radius: 8px;
+    opacity: 0; transition: opacity 0.3s; pointer-events: none;
+  }
+
+  .arch-node-icon { font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; font-weight: 500; text-transform: uppercase; }
+  .arch-node-name { font-size: 14px; font-weight: 500; line-height: 1.3; margin-bottom: 4px; }
+  .arch-node-sub  { font-size: 12px; line-height: 1.5; font-weight: 300; color: rgba(245, 240, 232, 0.5); }
+
+  .arch-node.source { border-color: rgba(70,190,100,0.25); }
+  .arch-node.source .arch-node-glow { box-shadow: 0 0 22px rgba(60,190,90,0.15); }
+  .arch-node.source .arch-node-icon { color: rgba(80,220,110,0.65); }
+  .arch-node.source .arch-node-name { color: rgba(180,240,195,0.95); }
+
+  .arch-node.process { border-color: rgba(210,160,50,0.25); }
+  .arch-node.process .arch-node-glow { box-shadow: 0 0 22px rgba(210,160,50,0.15); }
+  .arch-node.process .arch-node-icon { color: rgba(240,185,65,0.65); }
+  .arch-node.process .arch-node-name { color: rgba(250,220,155,0.95); }
+
+  .arch-node.retrieve { border-color: rgba(80,130,220,0.25); }
+  .arch-node.retrieve .arch-node-glow { box-shadow: 0 0 22px rgba(80,135,230,0.15); }
+  .arch-node.retrieve .arch-node-icon { color: rgba(110,165,250,0.65); }
+  .arch-node.retrieve .arch-node-name { color: rgba(175,205,255,0.95); }
+
+  .arch-node.respond { border-color: rgba(185,85,200,0.25); }
+  .arch-node.respond .arch-node-glow { box-shadow: 0 0 22px rgba(195,85,210,0.15); }
+  .arch-node.respond .arch-node-icon { color: rgba(220,110,240,0.65); }
+  .arch-node.respond .arch-node-name { color: rgba(230,185,245,0.95); }
+
+  .arch-stat {
+    font-family: 'DM Sans', sans-serif;
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+  .arch-stat.green  { color: rgba(100,225,125,0.85); border: 0.5px solid rgba(80,210,100,0.2); background: rgba(50,180,80,0.08); }
+  .arch-stat.amber  { color: rgba(240,190,70,0.85);  border: 0.5px solid rgba(230,170,55,0.2); background: rgba(200,150,40,0.08); }
+  .arch-stat.blue   { color: rgba(120,175,255,0.85); border: 0.5px solid rgba(100,155,240,0.2); background: rgba(75,125,220,0.08); }
+  .arch-stat.purple { color: rgba(220,120,245,0.85); border: 0.5px solid rgba(200,100,225,0.2); background: rgba(175,80,200,0.08); }
+
+  .arch-arrow-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 72px;
+  }
+
+  @keyframes archFlowDot {
+    0%   { offset-distance: 0%;   opacity: 0; }
+    8%   { opacity: 1; }
+    92%  { opacity: 1; }
+    100% { offset-distance: 100%; opacity: 0; }
+  }
+  .arch-dot1 { animation: archFlowDot 2.4s linear infinite; }
+  .arch-dot2 { animation: archFlowDot 2.4s linear infinite; animation-delay: 0.8s; }
+  .arch-dot3 { animation: archFlowDot 2.4s linear infinite; animation-delay: 1.6s; }
+
+  @media (max-width: 640px) {
+    .corpus-architecture { padding: 80px 24px; }
+  }
+
+
+  /* ── FLOATING CTA ── */
+  .corpus-float-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(26, 18, 11, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(184, 146, 42, 0.25);
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .corpus-float-cta.visible {
+    transform: translateY(0);
+  }
+
+  .corpus-float-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--cream);
+    opacity: 0.7;
+  }
+
+  .corpus-float-btn {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--espresso);
+    background: var(--gold);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .corpus-float-btn:hover {
+    background: #d4a830;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 520px) {
+    .corpus-float-cta { flex-direction: column; gap: 8px; padding: 10px 16px; }
+    .corpus-float-text { font-size: 11px; }
+  }
+</style>
+
+
+<!-- ═══════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════ -->
+<script>
+  // ── Sample prompts for carousel ──
+  const PROMPTS = [
+    "What is Adaptive Adoption and how does it differ from Kotter?",
+    "Does Paul have evidence for his claims about culture change?",
+    "What is the Intention-Action Gap and why does it matter for AI?",
+    "What does the Corpus say about trust as infrastructure?",
+    "How does behavioral governance differ from traditional compliance?",
+    "What is Oracle Science and why does it matter for the future of research?",
+    "Where does Paul disagree with mainstream change management?",
+    "What connects epistemic strength and organizational learning?",
+  ];
+
+  // ── Carousel ──
+  (function() {
+    const track = document.getElementById('carousel-track');
+    if (!track) return;
+    const VISIBLE = window.innerWidth > 700 ? 3 : 1;
+    let offset = 0;
+    let autoTimer;
+
+    function render() {
+      track.innerHTML = '';
+      for (let i = 0; i < VISIBLE; i++) {
+        const idx = (offset + i) % PROMPTS.length;
+        const el = document.createElement('div');
+        el.className = 'chat-carousel-prompt';
+        el.textContent = PROMPTS[idx];
+        el.addEventListener('click', function() {
+          const input = document.getElementById('chatbox-input');
+          if (input) {
+            input.value = PROMPTS[idx];
+            input.focus();
+          }
+        });
+        track.appendChild(el);
+      }
+    }
+
+    function advance(dir) {
+      offset = (offset + dir + PROMPTS.length) % PROMPTS.length;
+      render();
+      resetAuto();
+    }
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(function() { advance(1); }, 5000);
+    }
+
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    if (prevBtn) prevBtn.addEventListener('click', function() { advance(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { advance(1); });
+
+    render();
+    resetAuto();
+  })();
+
+
+  // ── Chatbox: send ──
+  (function() {
+    const input = document.getElementById('chatbox-input');
+    const sendBtn = document.getElementById('chatbox-send');
+    const messages = document.getElementById('chatbox-messages');
+    let emptyEl = document.getElementById('chatbox-empty');
+
+    if (!input || !sendBtn || !messages) return;
+
+    function send() {
+      const q = input.value.trim();
+      if (!q) return;
+
+      if (emptyEl && emptyEl.parentNode) {
+        emptyEl.parentNode.removeChild(emptyEl);
+        emptyEl = null;
+      }
+
+      // User message
+      const userMsg = document.createElement('div');
+      userMsg.className = 'msg msg-user';
+      userMsg.textContent = q;
+      messages.appendChild(userMsg);
+
+      input.value = '';
+
+      // Typing indicator
+      const typing = document.createElement('div');
+      typing.className = 'msg msg-typing';
+      typing.textContent = 'Searching 1,010 passages...';
+      messages.appendChild(typing);
+      messages.scrollTop = messages.scrollHeight;
+
+      // API call
+      fetch('/api/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        typing.remove();
+        const botMsg = document.createElement('div');
+        botMsg.className = 'msg msg-bot';
+        if (data.error) {
+          botMsg.textContent = data.error;
+        } else {
+          const sourceLine = data.sources && data.sources.length
+            ? '<div class="msg-sources">Sources: ' + data.sources.join(' \u00b7 ') + '</div>'
+            : '';
+          botMsg.innerHTML = data.answer.replace(/\n/g, '<br>') + sourceLine;
+        }
+        messages.appendChild(botMsg);
+        messages.scrollTop = messages.scrollHeight;
+      })
+      .catch(function() {
+        typing.remove();
+        const errMsg = document.createElement('div');
+        errMsg.className = 'msg msg-bot';
+        errMsg.textContent = 'Something went wrong. Please try again.';
+        messages.appendChild(errMsg);
+        messages.scrollTop = messages.scrollHeight;
+      });
+    }
+
+    sendBtn.addEventListener('click', send);
+    input.addEventListener('keydown', function(e) { if (e.key === 'Enter') send(); });
+  })();
+
+
+  // ── Question chips → chatbox ──
+  (function() {
+    document.querySelectorAll('.question-chip').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        const q = chip.getAttribute('data-question');
+        const input = document.getElementById('chatbox-input');
+        const chatbox = document.getElementById('chatbox');
+        if (input && q) {
+          input.value = q;
+          if (chatbox) chatbox.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(function() { input.focus(); }, 600);
+        }
+      });
+    });
+  })();
+
+
+  // ── Floating CTA ──
+  (function() {
+    const cta = document.getElementById('float-cta');
+    const ctaBtn = document.getElementById('float-cta-btn');
+    const chatbox = document.getElementById('chatbox');
+
+    if (!cta || !ctaBtn || !chatbox) return;
+
+    ctaBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      chatbox.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(function() {
+        const input = document.getElementById('chatbox-input');
+        if (input) input.focus();
+      }, 600);
+    });
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          cta.classList.remove('visible');
+        } else {
+          cta.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(chatbox);
+  })();
+</script>
