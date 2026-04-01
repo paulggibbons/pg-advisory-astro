@@ -1,0 +1,344 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Base
+  title="Keynotes & Speaking — Paul Gibbons | AI, Leadership, Change"
+  description="Book Paul Gibbons for keynotes on AI adoption, leadership in the AI era, and organizational change. Available via BrightSight (NA) and London Speaker Bureau (International)."
+>
+  <Nav />
+
+  <!-- HERO -->
+  <section class="keynotes-hero">
+    <div class="keynotes-inner">
+      <div class="keynotes-label">Speaking</div>
+      <h1 class="keynotes-headline">Keynotes &amp; Speaking</h1>
+      <p class="keynotes-sub">Speaking since 1997. Evidence-based, provocative, practical.</p>
+    </div>
+  </section>
+
+  <!-- YOUTUBE PLAYLIST -->
+  <section class="keynotes-playlist">
+    <div class="keynotes-inner">
+      <div class="keynotes-label reveal">Recent Talks</div>
+      <div class="playlist-wrapper reveal">
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLjdGnjJTaBY2y6cSF5Qrgi1BocTPqjm4k&rel=0"
+          title="Paul Gibbons — Keynote Talks"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED ENGAGEMENTS -->
+  <section class="keynotes-engagements">
+    <div class="keynotes-inner">
+      <div class="keynotes-label reveal">Selected Engagements</div>
+      <div class="engagements-list reveal">
+        <div class="engagement"><span class="engagement-year">Sep 2026</span><span class="engagement-event">Harvard European Alumni Association — Netherlands</span></div>
+        <div class="engagement"><span class="engagement-year">Dec 2025</span><span class="engagement-event">CultureCon Global Conference</span></div>
+        <div class="engagement"><span class="engagement-year">Jan 2024</span><span class="engagement-event">MSIG Annual Strategy Conference</span></div>
+        <div class="engagement"><span class="engagement-year">Mar 2020</span><span class="engagement-event">Implement Copenhagen</span></div>
+        <div class="engagement"><span class="engagement-year">2019</span><span class="engagement-event">Aspen Future of Work Conference</span></div>
+        <div class="engagement"><span class="engagement-year">2018</span><span class="engagement-event">Institute for Enterprise Ethics Annual Conference</span></div>
+        <div class="engagement"><span class="engagement-year">2017</span><span class="engagement-event">Talks at Google</span></div>
+        <div class="engagement"><span class="engagement-year">2016</span><span class="engagement-event">Microsoft Distinguished Author Program</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUREAUS / BOOKING -->
+  <section class="keynotes-booking">
+    <div class="keynotes-inner">
+      <div class="keynotes-label reveal">Book a Keynote</div>
+      <div class="bureau-cards reveal">
+        <a href="https://www.brightsightspeakers.com/speakers-a-z/paul-gibbons" target="_blank" rel="noopener" class="bureau-card">
+          <div class="bureau-card-name"><span style="color:#4BB4F1;">BrightSight</span> <span style="color:#E8944A;">speakers</span></div>
+          <div class="bureau-card-region">North America</div>
+          <div class="bureau-card-cta">Book via BrightSight &rarr;</div>
+        </a>
+        <a href="https://londonspeakerbureau.com/speaker-profile/paul-gibbons/" target="_blank" rel="noopener" class="bureau-card">
+          <img src="/images/lsb-logo.svg" alt="London Speaker Bureau" class="bureau-card-logo" />
+          <div class="bureau-card-region">International</div>
+          <div class="bureau-card-cta">Book via London Speaker Bureau &rarr;</div>
+        </a>
+      </div>
+      <p class="booking-direct reveal">For direct inquiries: <a href="mailto:paul@paulgibbonsadvisory.com">paul@paulgibbonsadvisory.com</a></p>
+    </div>
+  </section>
+
+  <!-- PROOF POINTS -->
+  <section class="keynotes-proof">
+    <div class="keynotes-inner">
+      <div class="proof-points reveal">
+        <span class="proof-point">100+ keynotes delivered</span>
+        <span class="proof-divider">&middot;</span>
+        <span class="proof-point">Google, Microsoft, HSBC, Harvard, London School of Economics</span>
+        <span class="proof-divider">&middot;</span>
+        <span class="proof-point">Top 52 to follow in AI (IBM, 2026)</span>
+      </div>
+      <a href="/meet-paul" class="proof-bio-link reveal">Full bio &rarr;</a>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<style>
+  /* ── KEYNOTES PAGE ── */
+  .keynotes-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .keynotes-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  /* Hero */
+  .keynotes-hero {
+    padding: 160px 48px 80px;
+    background: linear-gradient(170deg, var(--espresso) 0%, var(--chocolate) 40%, var(--chocolate-mid) 100%);
+  }
+
+  .keynotes-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+
+  .keynotes-sub {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(245, 240, 232, 0.7);
+    font-weight: 300;
+    max-width: 500px;
+  }
+
+  /* Playlist */
+  .keynotes-playlist {
+    padding: 80px 48px;
+    background: var(--espresso);
+  }
+
+  .playlist-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .playlist-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* Engagements */
+  .keynotes-engagements {
+    padding: 80px 48px;
+    background: var(--chocolate);
+  }
+
+  .engagements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+  }
+
+  .engagement {
+    display: flex;
+    gap: 32px;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(184, 146, 42, 0.1);
+  }
+
+  .engagement:first-child {
+    border-top: 1px solid rgba(184, 146, 42, 0.1);
+  }
+
+  .engagement-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    min-width: 100px;
+    flex-shrink: 0;
+  }
+
+  .engagement-event {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--cream-soft);
+    font-weight: 300;
+  }
+
+  /* Booking */
+  .keynotes-booking {
+    padding: 80px 48px;
+    background: var(--espresso);
+    position: relative;
+  }
+
+  .keynotes-booking::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+
+  .bureau-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 8px;
+  }
+
+  .bureau-card {
+    background: rgba(245, 240, 232, 0.03);
+    border: 1px solid rgba(184, 146, 42, 0.12);
+    padding: 40px 32px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all 0.4s;
+  }
+
+  .bureau-card:hover {
+    background: rgba(184, 146, 42, 0.06);
+    border-color: rgba(184, 146, 42, 0.3);
+  }
+
+  .bureau-card-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .bureau-card-logo {
+    height: 32px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  .bureau-card-region {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(245, 240, 232, 0.45);
+  }
+
+  .bureau-card-cta {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-top: 12px;
+    transition: color 0.3s;
+  }
+
+  .bureau-card:hover .bureau-card-cta {
+    color: var(--cream);
+  }
+
+  .booking-direct {
+    margin-top: 32px;
+    font-size: 14px;
+    color: rgba(245, 240, 232, 0.5);
+    font-weight: 300;
+  }
+
+  .booking-direct a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .booking-direct a:hover { color: var(--cream); }
+
+  /* Proof Points */
+  .keynotes-proof {
+    padding: 60px 48px;
+    background: var(--chocolate);
+    text-align: center;
+    border-top: 1px solid rgba(184, 146, 42, 0.08);
+  }
+
+  .proof-points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .proof-point {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: rgba(245, 240, 232, 0.6);
+    font-weight: 300;
+  }
+
+  .proof-divider {
+    color: var(--gold);
+    font-size: 18px;
+  }
+
+  .proof-bio-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .proof-bio-link:hover { color: var(--cream); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .keynotes-hero,
+    .keynotes-playlist,
+    .keynotes-engagements,
+    .keynotes-booking,
+    .keynotes-proof {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .bureau-cards { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .engagement { flex-direction: column; gap: 4px; }
+    .proof-points { flex-direction: column; gap: 8px; }
+    .proof-divider { display: none; }
+  }
+</style>
