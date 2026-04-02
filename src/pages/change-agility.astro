@@ -83,121 +83,274 @@ import '../styles/global.css';
   <!-- PILLARS HEADER -->
   <section class="ca-section-header">
     <div class="ca-section-header-label reveal">The Seven Pillars of Change Agility&trade;</div>
+    <p class="ca-section-header-sub reveal">Below: the high-level elements of the framework, with a single example tool, process, behavior, and skill per pillar.</p>
   </section>
 
-  <!-- SEVEN PILLARS -->
-  <section class="ca-pillars-section">
-    <div class="ca-pillars-inner reveal-stagger">
-
-      <div class="ca-pillar-card ca-pillar-card-top">
-        <h3 class="ca-pillar-title">Master the Craft</h3>
-        <div class="ca-pillar-tagline">Build capability through doing, not curriculum.</div>
-        <p class="ca-pillar-desc">Building with AI is like architecture, not calculus: you can't learn it in a classroom or a webinar. The dominant L&D model fails when the skill landscape shifts quarterly. AI Mastery requires craft: intimate knowledge of tools, understanding of their limits, and quality work produced through skill, not luck. The unit of learning is the community of practice.</p>
+  <!-- COLUMN HEADERS -->
+  <section class="ca-matrix-wrapper">
+    <div class="ca-col-headers">
+      <div class="ca-col-header"></div>
+      <div class="ca-col-header">
+        <div class="ca-col-title">TOOL</div>
       </div>
-
-      <div class="ca-pillar-card ca-pillar-card-top">
-        <h3 class="ca-pillar-title">Embrace Complexity</h3>
-        <div class="ca-pillar-tagline">You cannot plan your way through emergence, but you can design for it.</div>
-        <p class="ca-pillar-desc">Beyond personal productivity and turnkey SaaS lies complexity. AI adoption is a complex adaptive system &mdash; three bodies in motion producing emergent patterns no analytical solution can predict. The PACE method (Probe, Attend, Calibrate, Evolve) replaces plan-and-execute. Change support must be equally adaptive: probe-sense-respond, not waterfall.</p>
+      <div class="ca-col-header">
+        <div class="ca-col-title">PROCESS</div>
       </div>
-
-      <div class="ca-pillar-card ca-pillar-card-top">
-        <h3 class="ca-pillar-title">Consciously Manage Trust</h3>
-        <div class="ca-pillar-tagline">Trust is the change-resistance antivenom.</div>
-        <p class="ca-pillar-desc">Only 30 percent of Americans trust AI, and over half fear for their job. This was not the case with ERP, cloud, or mobile. Trust is not a byproduct of good leadership &mdash; it is a four-dimensional dynamic to calibrate: Relational, Institutional, Self-Trust, and Task Trust. Under-trust and over-trust both operate simultaneously and require different interventions.</p>
+      <div class="ca-col-header">
+        <div class="ca-col-title">BEHAVIOR</div>
       </div>
-
-      <div class="ca-pillar-card ca-pillar-card-top">
-        <h3 class="ca-pillar-title">Put People First&trade;</h3>
-        <div class="ca-pillar-tagline">Start with augmentation. Efficiency follows faster than if you start with efficiency.</div>
-        <p class="ca-pillar-desc">Traditional technological change cut the check, bought the tech, and persuaded people to use it. Invert the order: begin with tools and workflows that serve the human, that augment rather than automate. The human is the integration layer, not the end-user. People-first sequencing produces faster adoption, higher trust, and ultimately greater efficiency than efficiency-first approaches.</p>
+      <div class="ca-col-header">
+        <div class="ca-col-title">SKILL</div>
       </div>
+    </div>
 
-      <div class="ca-pillar-card ca-pillar-card-top">
-        <h3 class="ca-pillar-title">Design and Prototype</h3>
-        <div class="ca-pillar-tagline">Every initiative is a prototype until evidence says otherwise.</div>
-        <p class="ca-pillar-desc">Traditional change management assumes you know the destination: define the future state, plan the transition, execute. AI moves too fast to define a future state. Design thinking applied to organizational change: Build&ndash;Measure&ndash;Learn. Rapid prototyping sprints, safe-to-fail experiments, and evidence-based scaling replace big-bang rollouts.</p>
-      </div>
+    <!-- SEVEN PILLARS MATRIX -->
+    <div class="ca-matrix">
 
-      <div class="ca-pillar-card ca-pillar-card-top">
-        <h3 class="ca-pillar-title">Prioritize Behavior</h3>
-        <div class="ca-pillar-tagline">Change the environment, change the behavior; the mindset catches up.</div>
-        <p class="ca-pillar-desc">Awareness, desire, and knowledge do not add up to action. The intention-action gap is empirically documented &mdash; Aristotle named it akrasia twenty-four centuries ago. Pillar 6 replaces "persuade then pray" with diagnosis-first, environment-first, behavior-first methodology. COM-B diagnosis, behavioral systems mapping, and the Four-Driver Diagnostic Model.</p>
-      </div>
-
-      <div class="ca-pillar-card ca-pillar-card-top">
-        <h3 class="ca-pillar-title">Manage Ethics Always</h3>
-        <div class="ca-pillar-tagline">Ethics is not compliance and it isn't moralizing &mdash; it's phronesis.</div>
-        <p class="ca-pillar-desc">A "short list" of AI ethical issues runs to twenty items; no previous technology has been so powerful or so dangerous. Novel moral questions arise faster than governance can adjudicate. The leader is the ethicist in the room by default. Phronesis &mdash; practical wisdom &mdash; the meta-ethical skill that selects the right ethical lens for the context. Ethics as practiced capability, not governance appendix.</p>
-      </div>
-
-      <!-- SPANNING BAR -->
-      <div class="ca-pillars-examples-bar">These are single examples, drawn from a much more extensive repository</div>
-
-      <!-- ROW 2: Toolboxes -->
-      <div class="ca-pillar-card ca-pillar-card-bottom">
-        <div class="ca-pillar-toolbox">
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Tool</div><div class="ca-toolbox-name">Sandbox Environments</div><div class="ca-toolbox-desc">Safe place to break things without production consequences</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Process</div><div class="ca-toolbox-name">Peer Learning Circles</div><div class="ca-toolbox-desc">Weekly show + tell; structured "work out loud"</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Behavior</div><div class="ca-toolbox-name">Fail Loudly &mdash; Safely</div><div class="ca-toolbox-desc">Share misses and fixes in public, not just wins</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Skill</div><div class="ca-toolbox-name">Prompting as Craft</div><div class="ca-toolbox-desc">Task decomposition, constraint design, context engineering</div></div>
+      <!-- PILLAR 1: Master the Craft -->
+      <div class="ca-pillar-row ca-p1">
+        <div class="ca-pillar-def" data-num="1">
+          <div class="ca-pillar-num">PILLAR 1</div>
+          <div class="ca-pillar-name">Master the Craft</div>
+          <div class="ca-pillar-tagline">Build capability through doing, not curriculum.</div>
+          <div class="ca-pillar-desc">Building with AI is like architecture, not calculus: you can't learn it in a classroom or a webinar. The dominant L&amp;D model fails when the skill landscape shifts quarterly. AI Mastery requires craft: intimate knowledge of tools, understanding of their limits, and quality work produced through skill, not luck. The unit of learning is the community of practice.</div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Sandbox Environments</div>
+            <div class="ca-item-desc">Safe place to break things without production consequences</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Peer Learning Circles</div>
+            <div class="ca-item-desc">Weekly show + tell; structured "work out loud"</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Fail Loudly &mdash; Safely</div>
+            <div class="ca-item-desc">Share misses and fixes in public, not just wins</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Prompting as Craft</div>
+            <div class="ca-item-desc">Task decomposition, constraint design, context engineering</div>
+          </div>
         </div>
       </div>
 
-      <div class="ca-pillar-card ca-pillar-card-bottom">
-        <div class="ca-pillar-toolbox">
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Tool</div><div class="ca-toolbox-name">Polarity Maps</div><div class="ca-toolbox-desc">Managing tensions (innovation vs. safety) rather than choosing sides</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Process</div><div class="ca-toolbox-name">PACE: Probe</div><div class="ca-toolbox-desc">Design safe-to-fail experiments that test assumptions</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Behavior</div><div class="ca-toolbox-name">Silo-Busting</div><div class="ca-toolbox-desc">Breaking down organizational boundaries to enable cross-team learning</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Skill</div><div class="ca-toolbox-name">Pattern Journaling</div><div class="ca-toolbox-desc">Recording emerging patterns and system behaviors over time</div></div>
+      <!-- PILLAR 2: Embrace Complexity -->
+      <div class="ca-pillar-row ca-p2">
+        <div class="ca-pillar-def" data-num="2">
+          <div class="ca-pillar-num">PILLAR 2</div>
+          <div class="ca-pillar-name">Embrace Complexity</div>
+          <div class="ca-pillar-tagline">You cannot plan your way through emergence, but you can design for it.</div>
+          <div class="ca-pillar-desc">Beyond personal productivity and turnkey SaaS lies complexity. AI adoption is a complex adaptive system &mdash; three bodies in motion producing emergent patterns no analytical solution can predict. The PACE method (Probe, Attend, Calibrate, Evolve) replaces plan-and-execute. Change support must be equally adaptive: probe-sense-respond, not waterfall.</div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Polarity Maps</div>
+            <div class="ca-item-desc">Managing tensions (innovation vs. safety) rather than choosing sides</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">PACE: Probe</div>
+            <div class="ca-item-desc">Design safe-to-fail experiments that test assumptions</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Silo-Busting</div>
+            <div class="ca-item-desc">Breaking down organizational boundaries to enable cross-team learning</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Pattern Journaling</div>
+            <div class="ca-item-desc">Recording emerging patterns and system behaviors over time</div>
+          </div>
         </div>
       </div>
 
-      <div class="ca-pillar-card ca-pillar-card-bottom">
-        <div class="ca-pillar-toolbox">
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Tool</div><div class="ca-toolbox-name">Trust Barometer</div><div class="ca-toolbox-desc">Pulse check: "Do you trust this output?" mapped across teams and use cases</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Process</div><div class="ca-toolbox-name">TRUST: Test Assumptions</div><div class="ca-toolbox-desc">Surface implicit trust/distrust assumptions about AI reliability</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Behavior</div><div class="ca-toolbox-name">Vulnerability First</div><div class="ca-toolbox-desc">Leaders admitting ignorance and modeling uncertainty publicly</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Skill</div><div class="ca-toolbox-name">Consistency</div><div class="ca-toolbox-desc">Doing what you say you will &mdash; the behavioral foundation of trust</div></div>
+      <!-- PILLAR 3: Consciously Manage Trust -->
+      <div class="ca-pillar-row ca-p3">
+        <div class="ca-pillar-def" data-num="3">
+          <div class="ca-pillar-num">PILLAR 3</div>
+          <div class="ca-pillar-name">Consciously Manage Trust</div>
+          <div class="ca-pillar-tagline">Trust is the change-resistance antivenom.</div>
+          <div class="ca-pillar-desc">Only 30 percent of Americans trust AI, and over half fear for their job. This was not the case with ERP, cloud, or mobile. Trust is not a byproduct of good leadership &mdash; it is a four-dimensional dynamic to calibrate: Relational, Institutional, Self-Trust, and Task Trust. Under-trust and over-trust both operate simultaneously and require different interventions.</div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Trust Barometer</div>
+            <div class="ca-item-desc">Pulse check: "Do you trust this output?" mapped across teams and use cases</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">TRUST: Test Assumptions</div>
+            <div class="ca-item-desc">Surface implicit trust/distrust assumptions about AI reliability</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Vulnerability First</div>
+            <div class="ca-item-desc">Leaders admitting ignorance and modeling uncertainty publicly</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Consistency</div>
+            <div class="ca-item-desc">Doing what you say you will &mdash; the behavioral foundation of trust</div>
+          </div>
         </div>
       </div>
 
-      <div class="ca-pillar-card ca-pillar-card-bottom">
-        <div class="ca-pillar-toolbox">
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Tool</div><div class="ca-toolbox-name">Friction Audit</div><div class="ca-toolbox-desc">Mapping the drudgery in current workflows; start AI here</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Process</div><div class="ca-toolbox-name">HUMAN: Hear the Fear</div><div class="ca-toolbox-desc">Map what people are actually afraid of, not what the change plan assumes</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Behavior</div><div class="ca-toolbox-name">&ldquo;Superpower&rdquo; Mindset</div><div class="ca-toolbox-desc">Reframing AI as a bionic suit, not a replacement</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Skill</div><div class="ca-toolbox-name">Celebration of Relief</div><div class="ca-toolbox-desc">Cheering when drudgery is removed &mdash; reinforcing augmentation</div></div>
+      <!-- PILLAR 4: Put People First -->
+      <div class="ca-pillar-row ca-p4">
+        <div class="ca-pillar-def" data-num="4">
+          <div class="ca-pillar-num">PILLAR 4</div>
+          <div class="ca-pillar-name">Put People First&trade;</div>
+          <div class="ca-pillar-tagline">Start with augmentation. Efficiency follows faster than if you start with efficiency.</div>
+          <div class="ca-pillar-desc">Traditional technological change cut the check, bought the tech, and persuaded people to use it. Invert the order: begin with tools and workflows that serve the human, that augment rather than automate. The human is the integration layer, not the end-user. People-first sequencing produces faster adoption, higher trust, and ultimately greater efficiency than efficiency-first approaches.</div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Friction Audit</div>
+            <div class="ca-item-desc">Mapping the drudgery in current workflows; start AI here</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">HUMAN: Hear the Fear</div>
+            <div class="ca-item-desc">Map what people are actually afraid of, not what the change plan assumes</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">&ldquo;Superpower&rdquo; Mindset</div>
+            <div class="ca-item-desc">Reframing AI as a bionic suit, not a replacement</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Celebration of Relief</div>
+            <div class="ca-item-desc">Cheering when drudgery is removed &mdash; reinforcing augmentation</div>
+          </div>
         </div>
       </div>
 
-      <div class="ca-pillar-card ca-pillar-card-bottom">
-        <div class="ca-pillar-toolbox">
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Tool</div><div class="ca-toolbox-name">No-Code Sandboxes</div><div class="ca-toolbox-desc">Tools for non-technical builders to prototype AI workflows</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Process</div><div class="ca-toolbox-name">BUILD: Bound the Experiment</div><div class="ca-toolbox-desc">Define hypothesis, minimum viable test, and kill criteria</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Behavior</div><div class="ca-toolbox-name">Bias for Action</div><div class="ca-toolbox-desc">Taking quick steps before having perfect information</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Skill</div><div class="ca-toolbox-name">&ldquo;Rough Work&rdquo; Transparency</div><div class="ca-toolbox-desc">Showing unfinished work to learn faster</div></div>
+      <!-- PILLAR 5: Design and Prototype -->
+      <div class="ca-pillar-row ca-p5">
+        <div class="ca-pillar-def" data-num="5">
+          <div class="ca-pillar-num">PILLAR 5</div>
+          <div class="ca-pillar-name">Design and Prototype</div>
+          <div class="ca-pillar-tagline">Every initiative is a prototype until evidence says otherwise.</div>
+          <div class="ca-pillar-desc">Traditional change management assumes you know the destination: define the future state, plan the transition, execute. AI moves too fast to define a future state. Design thinking applied to organizational change: Build&ndash;Measure&ndash;Learn. Rapid prototyping sprints, safe-to-fail experiments, and evidence-based scaling replace big-bang rollouts.</div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">No-Code Sandboxes</div>
+            <div class="ca-item-desc">Tools for non-technical builders to prototype AI workflows</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">BUILD: Bound the Experiment</div>
+            <div class="ca-item-desc">Define hypothesis, minimum viable test, and kill criteria</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Bias for Action</div>
+            <div class="ca-item-desc">Taking quick steps before having perfect information</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">&ldquo;Rough Work&rdquo; Transparency</div>
+            <div class="ca-item-desc">Showing unfinished work to learn faster</div>
+          </div>
         </div>
       </div>
 
-      <div class="ca-pillar-card ca-pillar-card-bottom">
-        <div class="ca-pillar-toolbox">
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Tool</div><div class="ca-toolbox-name">Four-Driver Diagnostic</div><div class="ca-toolbox-desc">Capability, Motivation, Trust, Opportunity &mdash; diagnose which is the actual blocker</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Process</div><div class="ca-toolbox-name">SHIFT: Specify Behavior</div><div class="ca-toolbox-desc">Translate vague outcomes into observable actions (who / what / when / where)</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Behavior</div><div class="ca-toolbox-name">Environmental Design</div><div class="ca-toolbox-desc">Tweak defaults, reduce friction, restructure choice architecture</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Skill</div><div class="ca-toolbox-name">Friction Mapping</div><div class="ca-toolbox-desc">Identifying sludge that makes the desired behavior harder than it needs to be</div></div>
+      <!-- PILLAR 6: Prioritize Behavior -->
+      <div class="ca-pillar-row ca-p6">
+        <div class="ca-pillar-def" data-num="6">
+          <div class="ca-pillar-num">PILLAR 6</div>
+          <div class="ca-pillar-name">Prioritize Behavior</div>
+          <div class="ca-pillar-tagline">Change the environment, change the behavior; the mindset catches up.</div>
+          <div class="ca-pillar-desc">Awareness, desire, and knowledge do not add up to action. The intention-action gap is empirically documented &mdash; Aristotle named it akrasia twenty-four centuries ago. Pillar 6 replaces "persuade then pray" with diagnosis-first, environment-first, behavior-first methodology. COM-B diagnosis, behavioral systems mapping, and the Four-Driver Diagnostic Model.</div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Four-Driver Diagnostic</div>
+            <div class="ca-item-desc">Capability, Motivation, Trust, Opportunity &mdash; diagnose which is the actual blocker</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">SHIFT: Specify Behavior</div>
+            <div class="ca-item-desc">Translate vague outcomes into observable actions (who / what / when / where)</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Environmental Design</div>
+            <div class="ca-item-desc">Tweak defaults, reduce friction, restructure choice architecture</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Friction Mapping</div>
+            <div class="ca-item-desc">Identifying sludge that makes the desired behavior harder than it needs to be</div>
+          </div>
         </div>
       </div>
 
-      <div class="ca-pillar-card ca-pillar-card-bottom">
-        <div class="ca-pillar-toolbox">
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Tool</div><div class="ca-toolbox-name">Ethics Canvas</div><div class="ca-toolbox-desc">Business Model Canvas adapted for ethical risk: who is affected, what could go wrong</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Process</div><div class="ca-toolbox-name">ETHIC: Examine Harm</div><div class="ca-toolbox-desc">Harm-focused pre-mortem before every deployment</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Behavior</div><div class="ca-toolbox-name">&ldquo;Should We &gt; Can We&rdquo;</div><div class="ca-toolbox-desc">The moral pause button before every deployment decision</div></div>
-          <div class="ca-toolbox-item"><div class="ca-toolbox-cat">Skill</div><div class="ca-toolbox-name">Radical Transparency</div><div class="ca-toolbox-desc">Admitting AI limitations publicly &mdash; to users, to clients, to the board</div></div>
+      <!-- PILLAR 7: Manage Ethics Always -->
+      <div class="ca-pillar-row ca-p7">
+        <div class="ca-pillar-def" data-num="7">
+          <div class="ca-pillar-num">PILLAR 7</div>
+          <div class="ca-pillar-name">Manage Ethics Always</div>
+          <div class="ca-pillar-tagline">Ethics is not compliance and it isn't moralizing &mdash; it's phronesis.</div>
+          <div class="ca-pillar-desc">A "short list" of AI ethical issues runs to twenty items; no previous technology has been so powerful or so dangerous. Novel moral questions arise faster than governance can adjudicate. The leader is the ethicist in the room by default. Phronesis &mdash; practical wisdom &mdash; the meta-ethical skill that selects the right ethical lens for the context. Ethics as practiced capability, not governance appendix.</div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Ethics Canvas</div>
+            <div class="ca-item-desc">Business Model Canvas adapted for ethical risk: who is affected, what could go wrong</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">ETHIC: Examine Harm</div>
+            <div class="ca-item-desc">Harm-focused pre-mortem before every deployment</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">&ldquo;Should We &gt; Can We&rdquo;</div>
+            <div class="ca-item-desc">The moral pause button before every deployment decision</div>
+          </div>
+        </div>
+        <div class="ca-cell">
+          <div class="ca-cell-item">
+            <div class="ca-item-name">Radical Transparency</div>
+            <div class="ca-item-desc">Admitting AI limitations publicly &mdash; to users, to clients, to the board</div>
+          </div>
         </div>
       </div>
 
+    </div>
+
+    <!-- MATRIX FOOTER -->
+    <div class="ca-matrix-footer">
+      <div class="ca-matrix-brand">ADAPTIVE ADOPTION&trade; &mdash; CHANGE AGILITY&trade;</div>
+      <div class="ca-matrix-note">These are single examples, drawn from a much more extensive repository</div>
     </div>
   </section>
 
@@ -242,7 +395,7 @@ import '../styles/global.css';
       <h2>The Change Agility Reading List</h2>
       <div class="ca-rl-subtitle">The books and research that built this framework</div>
       <div class="ca-rl-grid">
-        <div class="ca-rl-entry"><div class="ca-rl-author">ARGYRIS, CHRIS &amp; SCHÖN, DONALD</div><div class="ca-rl-work">Organizational Learning (1978)</div><div class="ca-rl-line">Single-loop vs. double-loop learning. Organizations that adopt AI without questioning their adoption assumptions are single-looping.</div></div>
+        <div class="ca-rl-entry"><div class="ca-rl-author">ARGYRIS, CHRIS &amp; SCH&Ouml;N, DONALD</div><div class="ca-rl-work">Organizational Learning (1978)</div><div class="ca-rl-line">Single-loop vs. double-loop learning. Organizations that adopt AI without questioning their adoption assumptions are single-looping.</div></div>
         <div class="ca-rl-entry"><div class="ca-rl-author">ARISTOTLE</div><div class="ca-rl-work">Nicomachean Ethics</div><div class="ca-rl-line">Phronesis — practical wisdom as the meta-virtue. The episteme/techne/phronesis distinction is the backbone of Pillar 7. Akrasia — the intention-action gap — underpins Pillar 6.</div></div>
         <div class="ca-rl-entry"><div class="ca-rl-author">AUTOR, DAVID</div><div class="ca-rl-work">Why Are There Still So Many Jobs? (2015)</div><div class="ca-rl-line">Task-level analysis of automation. The unit of AI adoption is the task, not the job — foundational to Pillar 4.</div></div>
         <div class="ca-rl-entry"><div class="ca-rl-author">BANDURA, ALBERT</div><div class="ca-rl-work">Self-Efficacy (1977)</div><div class="ca-rl-line">Belief in one's own capability predicts behavior change. The psychological mechanism behind Pillar 1's emphasis on mastery through practice.</div></div>
@@ -275,7 +428,7 @@ import '../styles/global.css';
         <div class="ca-rl-entry"><div class="ca-rl-author">REST, JAMES</div><div class="ca-rl-work">Four-Component Model of Moral Behavior (1986)</div><div class="ca-rl-line">Ethical behavior requires sensitivity, judgment, motivation, and character — not just rules. The psychology behind Pillar 7.</div></div>
         <div class="ca-rl-entry"><div class="ca-rl-author">RIES, ERIC</div><div class="ca-rl-work">The Lean Startup (2011)</div><div class="ca-rl-line">Build-measure-learn. Every AI initiative is a prototype until evidence says otherwise. The operational logic of Pillar 5.</div></div>
         <div class="ca-rl-entry"><div class="ca-rl-author">SARASVATHY, SARAS</div><div class="ca-rl-work">Effectuation (2001)</div><div class="ca-rl-line">Entrepreneurial logic under uncertainty — start with what you have, not what you predict. The design principle behind probe-and-iterate.</div></div>
-        <div class="ca-rl-entry"><div class="ca-rl-author">SCHÖN, DONALD</div><div class="ca-rl-work">The Reflective Practitioner (1983)</div><div class="ca-rl-line">Reflection-in-action and knowing-in-action. How professionals actually think in practice, not in theory.</div></div>
+        <div class="ca-rl-entry"><div class="ca-rl-author">SCH&Ouml;N, DONALD</div><div class="ca-rl-work">The Reflective Practitioner (1983)</div><div class="ca-rl-line">Reflection-in-action and knowing-in-action. How professionals actually think in practice, not in theory.</div></div>
         <div class="ca-rl-entry"><div class="ca-rl-author">SENGE, PETER</div><div class="ca-rl-work">The Fifth Discipline (1990)</div><div class="ca-rl-line">Systems thinking and the learning organization. The aspiration that organizations can learn — and the evidence that most don't.</div></div>
         <div class="ca-rl-entry"><div class="ca-rl-author">SENNETT, RICHARD</div><div class="ca-rl-work">The Craftsman (2008)</div><div class="ca-rl-line">The dignity and epistemology of working with your hands. You learn by making, not by reading about making. The philosophical backbone of Pillar 1.</div></div>
         <div class="ca-rl-entry"><div class="ca-rl-author">SNOWDEN, DAVE</div><div class="ca-rl-work">Cynefin Framework (1999)</div><div class="ca-rl-line">Domain distinctions — simple, complicated, complex, chaotic. Matching the intervention to the domain. The operating system of Pillar 2.</div></div>
@@ -333,6 +486,17 @@ import '../styles/global.css';
 </Base>
 
 <style>
+  /* ═══════════════ CUSTOM PROPERTIES ═══════════════ */
+  :root {
+    --p1: #2a6b4a;
+    --p2: #2a5a7b;
+    --p3: #3a5fa0;
+    --p4: #8b5a2b;
+    --p5: #7a5c8a;
+    --p6: #c84b2f;
+    --p7: #8b2a2a;
+  }
+
   /* ═══════════════ HERO ═══════════════ */
   .ca-hero {
     min-height: 60vh;
@@ -519,8 +683,8 @@ import '../styles/global.css';
 
   /* ═══════════════ SECTION HEADER ═══════════════ */
   .ca-section-header {
-    padding: 80px 48px 40px;
-    background: var(--chocolate-mid);
+    padding: 80px 48px 24px;
+    background: var(--dark-bg, #1a1713);
     text-align: center;
   }
 
@@ -532,132 +696,218 @@ import '../styles/global.css';
     text-transform: uppercase;
   }
 
-  /* ═══════════════ PILLARS ═══════════════ */
-  .ca-pillars-section {
-    padding: 0 48px 80px;
-    background: var(--chocolate-mid);
+  .ca-section-header-sub {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(245,240,232,0.5);
+    margin-top: 12px;
   }
 
-  .ca-pillars-inner {
-    max-width: 1200px;
-    margin: 0 auto;
+  /* ═══════════════ MATRIX WRAPPER ═══════════════ */
+  .ca-matrix-wrapper {
+    padding: 0 20px 40px;
+    background: var(--dark-bg, #1a1713);
+  }
+
+  /* ═══════════════ COLUMN HEADERS ═══════════════ */
+  .ca-col-headers {
+    max-width: 1400px;
+    margin: 0 auto 2px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: 260px 1fr 1fr 1fr 1fr;
     gap: 2px;
   }
 
-  .ca-pillar-card {
-    background: var(--chocolate);
-    padding: 32px 20px 24px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s;
+  .ca-col-header {
+    background: var(--ink, #0f0e0d);
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .ca-col-header:first-child {
+    background: transparent;
+  }
+
+  .ca-col-header .ca-col-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: var(--gold);
+  }
+
+  /* ═══════════════ MATRIX ═══════════════ */
+  .ca-matrix {
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 2px;
   }
 
-  .ca-pillar-card-bottom { padding-top: 16px; }
+  .ca-pillar-row {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    min-height: 180px;
+  }
 
-  .ca-pillar-card::before {
-    content: '';
+  /* ═══════════════ PILLAR DEFINITION COLUMN ═══════════════ */
+  .ca-pillar-def {
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ca-pillar-def::after {
+    content: attr(data-num);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    color: rgba(255,255,255,0.06);
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 2px;
-    background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
+    right: 8px;
+    bottom: -20px;
+    line-height: 1;
   }
 
-  .ca-pillar-card:hover::before { transform: scaleX(1); }
-  .ca-pillar-card:hover { background: var(--chocolate-light); }
+  .ca-pillar-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+  }
 
-  .ca-pillar-title {
+  .ca-pillar-name {
     font-family: 'DM Serif Display', serif;
-    font-size: 20px;
-    color: var(--cream);
-    margin-bottom: 6px;
-    line-height: 1.15;
+    font-size: 22px;
+    color: #f5f0e8;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
   }
 
   .ca-pillar-tagline {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
     font-size: 12px;
-    color: var(--gold);
-    margin-bottom: 12px;
-    line-height: 1.4;
+    color: rgba(245,240,232,0.7);
+    line-height: 1.5;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
   }
 
   .ca-pillar-desc {
-    font-size: 13px;
-    line-height: 1.6;
-    color: rgba(245, 240, 232, 0.6);
-    font-weight: 300;
-    flex-grow: 1;
+    font-size: 11px;
+    line-height: 1.55;
+    color: rgba(245,240,232,0.55);
+    position: relative;
+    z-index: 2;
   }
 
-  .ca-pillars-examples-bar {
-    grid-column: 1 / -1;
-    text-align: center;
+  /* ═══════════════ CONTENT CELLS ═══════════════ */
+  .ca-cell {
+    background: var(--paper, #f5f0e8);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .ca-cell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  .ca-cell > * { position: relative; z-index: 1; }
+
+  .ca-cell-item {
+    padding-left: 12px;
+    border-left: 3px solid transparent;
+  }
+
+  .ca-cell-item .ca-item-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink, #0f0e0d);
+    margin-bottom: 4px;
+  }
+
+  .ca-cell-item .ca-item-desc {
+    font-size: 11.5px;
+    line-height: 1.5;
+    color: #3a3530;
+  }
+
+  /* ═══════════════ PILLAR-SPECIFIC COLORS ═══════════════ */
+  .ca-p1 .ca-pillar-def { background: var(--p1); }
+  .ca-p1 .ca-cell-item { border-left-color: var(--p1); }
+  .ca-p2 .ca-pillar-def { background: var(--p2); }
+  .ca-p2 .ca-cell-item { border-left-color: var(--p2); }
+  .ca-p3 .ca-pillar-def { background: var(--p3); }
+  .ca-p3 .ca-cell-item { border-left-color: var(--p3); }
+  .ca-p4 .ca-pillar-def { background: var(--p4); }
+  .ca-p4 .ca-cell-item { border-left-color: var(--p4); }
+  .ca-p5 .ca-pillar-def { background: var(--p5); }
+  .ca-p5 .ca-cell-item { border-left-color: var(--p5); }
+  .ca-p6 .ca-pillar-def { background: var(--p6); }
+  .ca-p6 .ca-cell-item { border-left-color: var(--p6); }
+  .ca-p7 .ca-pillar-def { background: var(--p7); }
+  .ca-p7 .ca-cell-item { border-left-color: var(--p7); }
+
+  /* ═══════════════ MATRIX FOOTER ═══════════════ */
+  .ca-matrix-footer {
+    max-width: 1400px;
+    margin: 2px auto 0;
+    background: var(--ink, #0f0e0d);
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ca-matrix-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #f5f0e8;
+  }
+
+  .ca-matrix-note {
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     font-style: italic;
     color: rgba(245, 240, 232, 0.5);
     letter-spacing: 0.3px;
-    padding: 10px 0;
-    border-top: 1px solid rgba(184, 146, 42, 0.25);
-    border-bottom: 1px solid rgba(184, 146, 42, 0.25);
-    background: var(--chocolate-mid);
-  }
-
-  .ca-pillar-toolbox {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-  }
-
-  .ca-toolbox-item { padding: 8px 0; }
-
-  .ca-toolbox-cat {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 8px;
-    letter-spacing: 3px;
-    color: var(--gold);
-    margin-bottom: 2px;
-    text-transform: uppercase;
-  }
-
-  .ca-toolbox-name {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--cream);
-    margin-bottom: 2px;
-    line-height: 1.25;
-  }
-
-  .ca-toolbox-desc {
-    font-size: 10px;
-    line-height: 1.45;
-    color: rgba(245, 240, 232, 0.4);
   }
 
   /* ═══════════════ FOUR DRIVERS ═══════════════ */
   .ca-drivers-section {
     padding: 80px 48px;
-    background: var(--espresso);
+    background: var(--paper, #f5f0e8);
     position: relative;
+    overflow: hidden;
   }
 
   .ca-drivers-section::before {
     content: '';
     position: absolute;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 1px; height: 60px;
-    background: linear-gradient(to bottom, rgba(184, 146, 42, 0.3), transparent);
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
   }
+
+  .ca-drivers-section > * { position: relative; z-index: 1; }
 
   .ca-drivers-inner { max-width: 1200px; margin: 0 auto; }
 
@@ -673,7 +923,7 @@ import '../styles/global.css';
   .ca-drivers-headline {
     font-family: 'DM Serif Display', serif;
     font-size: clamp(28px, 3.5vw, 44px);
-    color: var(--cream);
+    color: var(--ink, #0f0e0d);
     text-align: center;
     margin-bottom: 56px;
     line-height: 1.15;
@@ -687,32 +937,36 @@ import '../styles/global.css';
 
   .ca-driver-card {
     padding: 40px 32px;
-    background: var(--chocolate);
+    background: #fff;
     text-align: center;
     position: relative;
     overflow: hidden;
     transition: all 0.4s;
+    border-top: 3px solid var(--gold);
   }
 
   .ca-driver-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 2px;
-    background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
   }
 
-  .ca-driver-card:hover::before { transform: scaleX(1); }
-  .ca-driver-card:hover { background: var(--chocolate-light); }
+  .ca-driver-card > * { position: relative; z-index: 1; }
+
+  .ca-driver-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
 
   .ca-driver-icon {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 36px;
     color: var(--gold);
-    opacity: 0.4;
+    opacity: 0.5;
     margin-bottom: 16px;
   }
 
@@ -720,7 +974,7 @@ import '../styles/global.css';
     font-family: 'Bebas Neue', sans-serif;
     font-size: 16px;
     letter-spacing: 4px;
-    color: var(--gold);
+    color: var(--ink, #0f0e0d);
     margin-bottom: 12px;
   }
 
@@ -728,7 +982,7 @@ import '../styles/global.css';
     font-family: 'DM Serif Display', serif;
     font-style: italic;
     font-size: 18px;
-    color: var(--cream);
+    color: var(--ink, #0f0e0d);
     margin-bottom: 12px;
     line-height: 1.3;
   }
@@ -736,12 +990,12 @@ import '../styles/global.css';
   .ca-driver-desc {
     font-size: 14px;
     line-height: 1.65;
-    color: rgba(245, 240, 232, 0.55);
+    color: #3a3530;
     font-weight: 300;
   }
 
   /* ═══════════════ READING LIST ═══════════════ */
-  .ca-reading-list-section { background: var(--espresso); }
+  .ca-reading-list-section { background: var(--ink, #0f0e0d); }
 
   .ca-reading-list {
     max-width: 1200px;
@@ -752,7 +1006,7 @@ import '../styles/global.css';
   }
 
   .ca-reading-list::before {
-    content: '§';
+    content: '\00A7';
     font-family: 'DM Serif Display', serif;
     font-size: 240px;
     color: rgba(255,255,255,0.02);
@@ -772,7 +1026,7 @@ import '../styles/global.css';
   .ca-reading-list h2 {
     font-family: 'DM Serif Display', serif;
     font-size: 32px;
-    color: var(--cream);
+    color: var(--paper, #f5f0e8);
     margin-bottom: 8px;
   }
 
@@ -811,14 +1065,14 @@ import '../styles/global.css';
     font-family: 'DM Serif Display', serif;
     font-style: italic;
     font-size: 15px;
-    color: var(--cream);
+    color: var(--paper, #f5f0e8);
     line-height: 1.4;
   }
 
   .ca-rl-line {
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
-    color: var(--mid);
+    color: var(--mid, #6b6560);
     line-height: 1.4;
     margin-top: 2px;
   }
@@ -827,11 +1081,15 @@ import '../styles/global.css';
     grid-column: 1 / -1;
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
-    color: var(--mid);
+    color: var(--mid, #6b6560);
     border-top: 1px solid rgba(200,191,176,0.15);
     padding-top: 24px;
     margin-top: 16px;
     line-height: 1.6;
+  }
+
+  .ca-rl-note strong {
+    color: var(--paper, #f5f0e8);
   }
 
   /* ═══════════════ CTA ═══════════════ */
@@ -937,30 +1195,59 @@ import '../styles/global.css';
   }
 
   /* ═══════════════ RESPONSIVE ═══════════════ */
+  @media (max-width: 1100px) {
+    .ca-pillar-row {
+      grid-template-columns: 220px 1fr 1fr 1fr 1fr;
+    }
+    .ca-col-headers {
+      grid-template-columns: 220px 1fr 1fr 1fr 1fr;
+    }
+  }
+
   @media (max-width: 900px) {
     .ca-hero,
     .ca-split-section,
     .ca-repo-cta,
     .ca-section-header,
-    .ca-pillars-section,
     .ca-drivers-section,
     .ca-cta-section,
     .ca-related {
       padding-left: 24px;
       padding-right: 24px;
     }
+    .ca-matrix-wrapper { padding-left: 12px; padding-right: 12px; }
     .ca-split-inner { grid-template-columns: 1fr; }
     .ca-split-col:first-child { border-right: none; border-bottom: 1px solid rgba(184, 146, 42, 0.12); }
     .ca-drivers-grid { grid-template-columns: 1fr 1fr; }
-    .ca-pillars-inner { grid-template-columns: repeat(4, 1fr); }
+
+    .ca-col-headers { display: none; }
+    .ca-pillar-row {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .ca-pillar-def { padding: 24px; }
+    .ca-cell { padding: 16px 20px; }
+    .ca-cell-item { border-left-width: 3px; }
+    .ca-cell::after {
+      content: attr(data-label);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--mid, #6b6560);
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      z-index: 1;
+    }
+
     .ca-repo-cta-inner { flex-direction: column; text-align: center; gap: 20px; }
     .ca-reading-list { padding-left: 24px; padding-right: 24px; }
     .ca-rl-grid { grid-template-columns: 1fr; }
     .ca-related-grid { grid-template-columns: 1fr; }
+    .ca-matrix-footer { flex-direction: column; gap: 8px; text-align: center; padding: 16px 24px; }
   }
 
   @media (max-width: 640px) {
     .ca-drivers-grid { grid-template-columns: 1fr; }
-    .ca-pillars-inner { grid-template-columns: 1fr 1fr; }
   }
 </style>
