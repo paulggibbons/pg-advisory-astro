@@ -45,59 +45,32 @@
         <a href="#open-framework" class="github-link">Open the repository &rarr;</a>
       </div>
 
-      <!-- Model Card Preview -->
+      <!-- Model Card Teaser — Pillar 1: Master the Craft -->
       <div class="model-card-preview reveal">
-        <div class="model-card">
-          <div class="model-card-header">
-            <div class="model-card-pillar-label">Adaptive Adoption · Pillar 6 of 7</div>
-            <div class="model-card-num">6</div>
-            <div class="model-card-title">Prioritize<br /><em>Behavior</em></div>
-          </div>
-          <div class="model-card-claim">
-            "Awareness, desire, and knowledge do not add up to action — change the environment and the behavior; the mindset catches up."
-          </div>
-          <div class="model-card-body">
-            <div class="model-card-col">
-              <div class="model-card-col-label">Diagnostic Model</div>
-              <div class="diagnostic-grid">
-                <div class="diagnostic-item" style="background:#eef3f0;border-left:2px solid #4a8c6f;">
-                  <div class="diagnostic-name">CAPABILITY</div>
-                  <div class="diagnostic-q">"Can I?"</div>
-                </div>
-                <div class="diagnostic-item" style="background:#f5ede8;border-left:2px solid #c84b2f;">
-                  <div class="diagnostic-name">MOTIVATION</div>
-                  <div class="diagnostic-q">"Why should I?"</div>
-                </div>
-                <div class="diagnostic-item" style="background:#edf0f5;border-left:2px solid #3a5fa0;">
-                  <div class="diagnostic-name">TRUST</div>
-                  <div class="diagnostic-q">"Should I?"</div>
-                </div>
-                <div class="diagnostic-item" style="background:#f5f0e0;border-left:2px solid #b8922a;">
-                  <div class="diagnostic-name">OPPORTUNITY</div>
-                  <div class="diagnostic-q">"Am I enabled?"</div>
-                </div>
-              </div>
+        <div class="model-card-teaser">
+          <div class="model-card">
+            <div class="model-card-header">
+              <div class="model-card-pillar-label" style="color:#2a6b4a;">Adaptive Adoption · Pillar 1 of 7</div>
+              <div class="model-card-num">1</div>
+              <div class="model-card-title">Master<br /><em style="color:#2a6b4a;">the Craft</em></div>
             </div>
-            <div class="model-card-col">
-              <div class="model-card-col-label">SHIFT Method <span class="shift-attr">© Robert Meza, <em>Aim for Behaviour</em></span></div>
-              <div class="shift-list">
-                <div class="shift-item"><span class="shift-letter">S</span><span><strong>Specify</strong> the Behavior</span></div>
-                <div class="shift-item"><span class="shift-letter">H</span><span><strong>Hypothesize</strong> Barriers</span></div>
-                <div class="shift-item"><span class="shift-letter">I</span><span><strong>Intervene</strong></span></div>
-                <div class="shift-item"><span class="shift-letter">F</span><span><strong>Facilitate</strong> Stakeholders</span></div>
-                <div class="shift-item"><span class="shift-letter">T</span><span><strong>Test</strong> and Iterate</span></div>
-              </div>
+            <div class="model-card-claim" style="border-bottom-color:#2a6b4a;">
+              "Capability is built through doing, not curriculum — the unit of learning is the community of practice, not the training course."
             </div>
           </div>
-          <div class="model-card-footer">
-            <div class="model-card-footer-label">Adaptive Adoption</div>
-            <div class="model-card-footer-version">v1.0-beta · Pillar 6/7</div>
-          </div>
-          <a href="https://github.com/paulggibbons/adaptive_adoption/blob/main/pillars/06-prioritize-behavior/pillar06_model_code.html" target="_blank" rel="noopener" class="model-card-overlay">
-            <span>View the whole card &rarr;</span>
-          </a>
+          <div class="model-card-fade"></div>
         </div>
+        <button class="model-card-expand-btn" id="open-model-card">View the whole card &rarr;</button>
         <a href="https://github.com/paulggibbons/adaptive_adoption" target="_blank" rel="noopener" class="model-card-repo-link">Explore all the model cards on GitHub &rarr;</a>
+      </div>
+
+      <!-- Model Card Modal -->
+      <div class="model-card-modal" id="model-card-modal">
+        <div class="model-card-modal-backdrop" id="modal-backdrop"></div>
+        <div class="model-card-modal-content">
+          <button class="model-card-modal-close" id="modal-close">&times;</button>
+          <iframe src="/pillar01-model-card.html" class="model-card-iframe" title="Pillar 1: Master the Craft — Full Model Card"></iframe>
+        </div>
       </div>
 
       <div class="framework-ctas reveal-stagger">
@@ -195,7 +168,14 @@
 
   .github-link:hover { gap: 14px; }
 
-  /* Model Card Preview */
+  /* Model Card Teaser */
+  .model-card-teaser {
+    position: relative;
+    max-width: 520px;
+    max-height: 200px;
+    overflow: hidden;
+  }
+
   .model-card {
     background: var(--paper);
     max-width: 520px;
@@ -214,7 +194,6 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 9px;
     letter-spacing: 3px;
-    color: #c84b2f;
     margin-bottom: 4px;
   }
 
@@ -239,11 +218,6 @@
     z-index: 2;
   }
 
-  .model-card-title em {
-    color: #c84b2f;
-    font-style: italic;
-  }
-
   .model-card-claim {
     background: #0f0e0d;
     color: var(--paper);
@@ -252,132 +226,90 @@
     font-style: italic;
     font-size: 11px;
     line-height: 1.5;
-    border-bottom: 2px solid #c84b2f;
   }
 
-  .model-card-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    font-size: 10px;
-    line-height: 1.5;
-    color: #3a3530;
-  }
-
-  .model-card-col:first-child {
-    padding: 16px 20px;
-    border-right: 1px solid #c8bfb0;
-  }
-
-  .model-card-col:last-child {
-    padding: 16px 20px;
-  }
-
-  .model-card-col-label {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: #b8922a;
-    margin-bottom: 6px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #c8bfb0;
-  }
-
-  .diagnostic-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
-  }
-
-  .diagnostic-item {
-    padding: 6px 8px;
-  }
-
-  .diagnostic-name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 10px;
-    letter-spacing: 1px;
-    color: #0f0e0d;
-  }
-
-  .diagnostic-q {
-    font-size: 8px;
-    color: #6b6560;
-  }
-
-  .shift-attr {
-    font-size: 7px;
-    letter-spacing: 1px;
-    color: #6b6560;
-    font-family: 'DM Sans', sans-serif;
-  }
-
-  .shift-list {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .shift-item {
-    display: flex;
-    gap: 8px;
-  }
-
-  .shift-letter {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 16px;
-    color: #c84b2f;
-    line-height: 1;
-    width: 12px;
-  }
-
-  .shift-item strong {
-    color: #0f0e0d;
-    font-weight: 500;
-  }
-
-  .model-card-footer {
-    background: #0f0e0d;
-    padding: 10px 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .model-card-footer-label {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--paper);
-  }
-
-  .model-card-footer-version {
-    font-size: 8px;
-    color: #6b6560;
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 2px;
-  }
-
-  .model-card-overlay {
+  .model-card-fade {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60px;
-    background: linear-gradient(transparent, rgba(15,14,13,0.6));
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 12px;
-    text-decoration: none;
+    height: 40px;
+    background: linear-gradient(transparent, var(--chocolate));
+    pointer-events: none;
   }
 
-  .model-card-overlay span {
+  .model-card-expand-btn {
+    display: block;
+    margin-top: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 3px;
-    color: var(--paper);
-    opacity: 0.8;
+    color: #3DCC80;
+    transition: color 0.3s;
+  }
+
+  .model-card-expand-btn:hover { color: var(--cream); }
+
+  /* Model Card Modal */
+  .model-card-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .model-card-modal.active {
+    display: flex;
+  }
+
+  .model-card-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 14, 13, 0.85);
+  }
+
+  .model-card-modal-content {
+    position: relative;
+    z-index: 2;
+    width: 940px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow: auto;
+    background: #1a1713;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  }
+
+  .model-card-modal-close {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 3;
+    background: rgba(15, 14, 13, 0.8);
+    border: 1px solid rgba(184, 146, 42, 0.3);
+    color: var(--cream);
+    font-size: 28px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background 0.2s;
+  }
+
+  .model-card-modal-close:hover { background: rgba(184, 146, 42, 0.2); }
+
+  .model-card-iframe {
+    width: 100%;
+    height: 90vh;
+    border: none;
+    display: block;
   }
 
   .model-card-repo-link {
@@ -447,3 +379,29 @@
     .framework-ctas { grid-template-columns: 1fr; }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('open-model-card');
+    var modal = document.getElementById('model-card-modal');
+    var backdrop = document.getElementById('modal-backdrop');
+    var close = document.getElementById('modal-close');
+    if (!btn || !modal) return;
+
+    btn.addEventListener('click', function() {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    close.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+  });
+</script>
