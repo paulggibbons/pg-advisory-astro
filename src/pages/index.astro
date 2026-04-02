@@ -18,11 +18,63 @@ import '../styles/global.css';
 <Base>
   <Fragment slot="head">
     <SEO
-      title="Paul Gibbons Advisory — People-First AI Adoption"
+      title="Paul Gibbons Advisory — AI Strategy. Human Change."
       description="Paul Gibbons is an AI adoption strategist, keynote speaker, and author of 8 books. Creator of the Adaptive Adoption framework — leadership, governance, and behavioral science for enterprise AI."
       canonicalUrl="/"
     />
   </Fragment>
+
+  <!-- Splash overlay — shows once per session -->
+  <div class="splash-overlay" id="splash-overlay">
+    <p class="splash-text">AI has moved the goalposts for leading change.</p>
+  </div>
+
+  <style>
+    .splash-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(170deg, var(--espresso) 0%, var(--chocolate) 40%, var(--chocolate-mid) 100%);
+      opacity: 1;
+      transition: opacity 0.6s ease;
+      pointer-events: all;
+    }
+
+    .splash-overlay.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .splash-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 4vw, 52px);
+      color: var(--cream);
+      text-align: center;
+      max-width: 700px;
+      padding: 0 32px;
+      line-height: 1.3;
+    }
+  </style>
+
+  <script>
+    (function() {
+      const overlay = document.getElementById('splash-overlay');
+      if (!overlay) return;
+      if (sessionStorage.getItem('splash-shown')) {
+        overlay.remove();
+        return;
+      }
+      sessionStorage.setItem('splash-shown', '1');
+      setTimeout(function() {
+        overlay.classList.add('fade-out');
+        setTimeout(function() { overlay.remove(); }, 600);
+      }, 1500);
+    })();
+  </script>
+
   <Nav />
   <Hero />
   <BureauStrip />
