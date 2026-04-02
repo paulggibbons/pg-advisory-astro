@@ -46,8 +46,8 @@ const testimonials = [
         <div class="testimonial-role">{t.role}</div>
       </div>
     ))}
-    {/* Duplicate for infinite scroll */}
-    {testimonials.slice(0, 3).map(t => (
+    {/* Duplicate full set for seamless infinite scroll */}
+    {testimonials.map(t => (
       <div class="testimonial-card">
         <p class="testimonial-text">&ldquo;{t.text}&rdquo;</p>
         <div class="testimonial-author">{t.author}</div>
