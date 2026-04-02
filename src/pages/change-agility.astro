@@ -22,26 +22,23 @@ import '../styles/global.css';
 
   <Nav />
 
-  <!-- HERO -->
-  <section class="ca-hero">
-    <div class="ca-hero-bg"></div>
-    <div class="ca-hero-glow"></div>
-    <div class="ca-hero-content">
-      <div class="ca-hero-label">Adaptive Adoption&trade;</div>
-      <h1 class="ca-hero-headline"><em>Change Agility&trade;</em></h1>
-      <p class="ca-hero-sub">
-        Change management was designed in an era, and for an era, that has passed. This is an organizational change framework built for AI &mdash; not just for change managers, but for Forward Deployed Engineers, developers, and adoption leaders.
-      </p>
-    </div>
-  </section>
+  <div class="ca-wrapper">
 
-  <!-- PROBLEM / RESPONSE -->
-  <section class="ca-split-section">
-    <div class="ca-split-inner reveal">
-      <div class="ca-split-col">
-        <div class="ca-split-label">The Problem</div>
-        <h2 class="ca-split-heading">The Specific Adoption Problems AI Creates</h2>
-        <ul class="ca-split-list">
+    <!-- Page Header -->
+    <div class="ca-page-header">
+      <div class="ca-label">ADAPTIVE ADOPTION&trade; &mdash; CHANGE AGILITY&trade;</div>
+      <h1>
+        <em>Change Agility&trade;</em>
+      </h1>
+      <div class="ca-subtitle">Change management was designed in an era, and for an era, that has passed. This is an organizational change framework built for AI &mdash; not just for change managers, but for Forward Deployed Engineers, developers, and adoption leaders.</div>
+    </div>
+
+    <!-- Context Boxes -->
+    <div class="ca-context-boxes">
+      <div class="ca-context-box">
+        <div class="ca-box-num">THE PROBLEM</div>
+        <h3>The Specific Adoption Problems AI Creates</h3>
+        <ul>
           <li><strong>Change is treated as a project, not a capability.</strong> Organizations run change as discrete initiatives with start dates and end dates. AI doesn't end. The organizations that win will be the ones that build permanent adaptive capacity &mdash; not the ones that execute the best rollout plan.</li>
           <li><strong>People are treated as the last mile.</strong> Traditional change cut the check, bought the tech, and persuaded people to use it. With AI, the human is the integration layer, not the end-user.</li>
           <li><strong>Traditional training never worked well.</strong> Some experts put "training transfer to the job" as low as ten percent. AI is more like carpentry than calculus &mdash; you have to build with it to learn it. And the half-life of AI knowledge is about three months.</li>
@@ -52,10 +49,10 @@ import '../styles/global.css';
           <li><strong>Ethics is outsourced to compliance.</strong> A "short list" of AI ethical issues runs to forty items. No committee meets fast enough to adjudicate them in real time.</li>
         </ul>
       </div>
-      <div class="ca-split-col">
-        <div class="ca-split-label">The Response</div>
-        <h2 class="ca-split-heading">Why Change Agility Is Different</h2>
-        <ul class="ca-split-list">
+      <div class="ca-context-box">
+        <div class="ca-box-num">THE RESPONSE</div>
+        <h3>Why Change Agility Is Different</h3>
+        <ul>
           <li><strong>Agility as infrastructure.</strong> Change Agility is not a program you run &mdash; it is a capability you build. Seven pillars, each with tools, processes, behaviors, and skills that compound over time. The flywheel, not the project plan.</li>
           <li><strong>People-first sequencing.</strong> Invert the order: begin with tools and workflows that serve the human, that augment rather than automate. You get to the efficiency gains faster by not starting with them.</li>
           <li><strong>Craft, not curriculum.</strong> AI is not a language you learn; it is a system you architect. The unit of learning is the community of practice &mdash; people learning together, in public, through doing.</li>
@@ -67,40 +64,40 @@ import '../styles/global.css';
         </ul>
       </div>
     </div>
-  </section>
 
-  <!-- REPO CTA -->
-  <section class="ca-repo-cta reveal">
-    <div class="ca-repo-cta-inner">
-      <p class="ca-repo-cta-text">When management ideas live in PDFs, they become rigid. The tools, diagnostics, and methods behind this framework are open and inspectable.</p>
-      <a href="https://github.com/paulggibbons/adaptive_adoption" target="_blank" rel="noopener" class="ca-repo-cta-btn">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+    <!-- Repo CTA -->
+    <div class="ca-repo-cta">
+      <p>When management ideas live in PDFs, they become rigid. The tools, diagnostics, and methods behind this framework are open and inspectable.</p>
+      <a href="https://github.com/paulggibbons/adaptive_adoption" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         OPEN THE REPOSITORY
       </a>
     </div>
-  </section>
 
-  <!-- PILLARS HEADER -->
-  <section class="ca-section-header">
-    <div class="ca-section-header-label reveal">The Seven Pillars of Change Agility&trade;</div>
-    <p class="ca-section-header-sub reveal">Below: the high-level elements of the framework, with a single example tool, process, behavior, and skill per pillar.</p>
-  </section>
+    <!-- Section Break -->
+    <div class="ca-section-break">
+      <p>Below: the high-level elements of the framework, with a single example tool, process, behavior, and skill per pillar.</p>
+      <p class="ca-break-headline">THE CHANGE AGILITY FRAMEWORK</p>
+    </div>
 
-  <!-- COLUMN HEADERS -->
-  <section class="ca-matrix-wrapper">
+    <!-- Column Headers -->
     <div class="ca-col-headers">
       <div class="ca-col-header"></div>
       <div class="ca-col-header">
         <div class="ca-col-title">TOOL</div>
+        <div class="ca-col-sub">WHAT YOU USE</div>
       </div>
       <div class="ca-col-header">
         <div class="ca-col-title">PROCESS</div>
+        <div class="ca-col-sub">HOW YOU WORK</div>
       </div>
       <div class="ca-col-header">
         <div class="ca-col-title">BEHAVIOR</div>
+        <div class="ca-col-sub">WHAT YOU MODEL</div>
       </div>
       <div class="ca-col-header">
         <div class="ca-col-title">SKILL</div>
+        <div class="ca-col-sub">WHAT YOU BUILD</div>
       </div>
     </div>
 
@@ -116,24 +113,28 @@ import '../styles/global.css';
           <div class="ca-pillar-desc">Building with AI is like architecture, not calculus: you can't learn it in a classroom or a webinar. The dominant L&amp;D model fails when the skill landscape shifts quarterly. AI Mastery requires craft: intimate knowledge of tools, understanding of their limits, and quality work produced through skill, not luck. The unit of learning is the community of practice.</div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">TOOL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Sandbox Environments</div>
             <div class="ca-item-desc">Safe place to break things without production consequences</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">PROCESS</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Peer Learning Circles</div>
             <div class="ca-item-desc">Weekly show + tell; structured "work out loud"</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">BEHAVIOR</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Fail Loudly &mdash; Safely</div>
             <div class="ca-item-desc">Share misses and fixes in public, not just wins</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">SKILL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Prompting as Craft</div>
             <div class="ca-item-desc">Task decomposition, constraint design, context engineering</div>
@@ -150,24 +151,28 @@ import '../styles/global.css';
           <div class="ca-pillar-desc">Beyond personal productivity and turnkey SaaS lies complexity. AI adoption is a complex adaptive system &mdash; three bodies in motion producing emergent patterns no analytical solution can predict. The PACE method (Probe, Attend, Calibrate, Evolve) replaces plan-and-execute. Change support must be equally adaptive: probe-sense-respond, not waterfall.</div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">TOOL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Polarity Maps</div>
             <div class="ca-item-desc">Managing tensions (innovation vs. safety) rather than choosing sides</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">PROCESS</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">PACE: Probe</div>
             <div class="ca-item-desc">Design safe-to-fail experiments that test assumptions</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">BEHAVIOR</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Silo-Busting</div>
             <div class="ca-item-desc">Breaking down organizational boundaries to enable cross-team learning</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">SKILL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Pattern Journaling</div>
             <div class="ca-item-desc">Recording emerging patterns and system behaviors over time</div>
@@ -184,24 +189,28 @@ import '../styles/global.css';
           <div class="ca-pillar-desc">Only 30 percent of Americans trust AI, and over half fear for their job. This was not the case with ERP, cloud, or mobile. Trust is not a byproduct of good leadership &mdash; it is a four-dimensional dynamic to calibrate: Relational, Institutional, Self-Trust, and Task Trust. Under-trust and over-trust both operate simultaneously and require different interventions.</div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">TOOL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Trust Barometer</div>
             <div class="ca-item-desc">Pulse check: "Do you trust this output?" mapped across teams and use cases</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">PROCESS</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">TRUST: Test Assumptions</div>
             <div class="ca-item-desc">Surface implicit trust/distrust assumptions about AI reliability</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">BEHAVIOR</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Vulnerability First</div>
             <div class="ca-item-desc">Leaders admitting ignorance and modeling uncertainty publicly</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">SKILL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Consistency</div>
             <div class="ca-item-desc">Doing what you say you will &mdash; the behavioral foundation of trust</div>
@@ -218,24 +227,28 @@ import '../styles/global.css';
           <div class="ca-pillar-desc">Traditional technological change cut the check, bought the tech, and persuaded people to use it. Invert the order: begin with tools and workflows that serve the human, that augment rather than automate. The human is the integration layer, not the end-user. People-first sequencing produces faster adoption, higher trust, and ultimately greater efficiency than efficiency-first approaches.</div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">TOOL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Friction Audit</div>
             <div class="ca-item-desc">Mapping the drudgery in current workflows; start AI here</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">PROCESS</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">HUMAN: Hear the Fear</div>
             <div class="ca-item-desc">Map what people are actually afraid of, not what the change plan assumes</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">BEHAVIOR</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">&ldquo;Superpower&rdquo; Mindset</div>
             <div class="ca-item-desc">Reframing AI as a bionic suit, not a replacement</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">SKILL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Celebration of Relief</div>
             <div class="ca-item-desc">Cheering when drudgery is removed &mdash; reinforcing augmentation</div>
@@ -252,24 +265,28 @@ import '../styles/global.css';
           <div class="ca-pillar-desc">Traditional change management assumes you know the destination: define the future state, plan the transition, execute. AI moves too fast to define a future state. Design thinking applied to organizational change: Build&ndash;Measure&ndash;Learn. Rapid prototyping sprints, safe-to-fail experiments, and evidence-based scaling replace big-bang rollouts.</div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">TOOL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">No-Code Sandboxes</div>
             <div class="ca-item-desc">Tools for non-technical builders to prototype AI workflows</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">PROCESS</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">BUILD: Bound the Experiment</div>
             <div class="ca-item-desc">Define hypothesis, minimum viable test, and kill criteria</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">BEHAVIOR</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Bias for Action</div>
             <div class="ca-item-desc">Taking quick steps before having perfect information</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">SKILL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">&ldquo;Rough Work&rdquo; Transparency</div>
             <div class="ca-item-desc">Showing unfinished work to learn faster</div>
@@ -286,24 +303,28 @@ import '../styles/global.css';
           <div class="ca-pillar-desc">Awareness, desire, and knowledge do not add up to action. The intention-action gap is empirically documented &mdash; Aristotle named it akrasia twenty-four centuries ago. Pillar 6 replaces "persuade then pray" with diagnosis-first, environment-first, behavior-first methodology. COM-B diagnosis, behavioral systems mapping, and the Four-Driver Diagnostic Model.</div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">TOOL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Four-Driver Diagnostic</div>
             <div class="ca-item-desc">Capability, Motivation, Trust, Opportunity &mdash; diagnose which is the actual blocker</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">PROCESS</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">SHIFT: Specify Behavior</div>
             <div class="ca-item-desc">Translate vague outcomes into observable actions (who / what / when / where)</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">BEHAVIOR</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Environmental Design</div>
             <div class="ca-item-desc">Tweak defaults, reduce friction, restructure choice architecture</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">SKILL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Friction Mapping</div>
             <div class="ca-item-desc">Identifying sludge that makes the desired behavior harder than it needs to be</div>
@@ -320,24 +341,28 @@ import '../styles/global.css';
           <div class="ca-pillar-desc">A "short list" of AI ethical issues runs to twenty items; no previous technology has been so powerful or so dangerous. Novel moral questions arise faster than governance can adjudicate. The leader is the ethicist in the room by default. Phronesis &mdash; practical wisdom &mdash; the meta-ethical skill that selects the right ethical lens for the context. Ethics as practiced capability, not governance appendix.</div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">TOOL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Ethics Canvas</div>
             <div class="ca-item-desc">Business Model Canvas adapted for ethical risk: who is affected, what could go wrong</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">PROCESS</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">ETHIC: Examine Harm</div>
             <div class="ca-item-desc">Harm-focused pre-mortem before every deployment</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">BEHAVIOR</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">&ldquo;Should We &gt; Can We&rdquo;</div>
             <div class="ca-item-desc">The moral pause button before every deployment decision</div>
           </div>
         </div>
         <div class="ca-cell">
+          <div class="ca-cell-label">SKILL</div>
           <div class="ca-cell-item">
             <div class="ca-item-name">Radical Transparency</div>
             <div class="ca-item-desc">Admitting AI limitations publicly &mdash; to users, to clients, to the board</div>
@@ -349,17 +374,15 @@ import '../styles/global.css';
 
     <!-- MATRIX FOOTER -->
     <div class="ca-matrix-footer">
-      <div class="ca-matrix-brand">ADAPTIVE ADOPTION&trade; &mdash; CHANGE AGILITY&trade;</div>
-      <div class="ca-matrix-note">These are single examples, drawn from a much more extensive repository</div>
+      <div class="ca-brand">ADAPTIVE ADOPTION&trade; &mdash; CHANGE AGILITY&trade;</div>
+      <div class="ca-version">FRAMEWORK MATRIX &middot; v1.0-beta &middot; March 2026</div>
     </div>
-  </section>
 
-  <!-- FOUR DRIVERS -->
-  <section class="ca-drivers-section">
-    <div class="ca-drivers-inner">
-      <div class="ca-drivers-label reveal">The Diagnostic Engine</div>
-      <h2 class="ca-drivers-headline reveal">Four-Driver Diagnostic Model</h2>
-      <div class="ca-drivers-grid reveal-stagger">
+    <!-- FOUR DRIVERS -->
+    <div class="ca-drivers-section">
+      <div class="ca-drivers-label">THE DIAGNOSTIC ENGINE</div>
+      <h2 class="ca-drivers-headline">Four-Driver Diagnostic Model</h2>
+      <div class="ca-drivers-grid">
         <div class="ca-driver-card">
           <div class="ca-driver-icon">C</div>
           <div class="ca-driver-name">Capability</div>
@@ -386,12 +409,10 @@ import '../styles/global.css';
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- READING LIST -->
-  <section class="ca-reading-list-section">
-    <div class="ca-reading-list reveal">
-      <div class="ca-rl-label">FURTHER READING</div>
+    <!-- READING LIST -->
+    <div class="ca-reading-list">
+      <div class="ca-rl-label">INTELLECTUAL PROVENANCE</div>
       <h2>The Change Agility Reading List</h2>
       <div class="ca-rl-subtitle">The books and research that built this framework</div>
       <div class="ca-rl-grid">
@@ -443,7 +464,14 @@ import '../styles/global.css';
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- Matrix Footer (bottom) -->
+    <div class="ca-matrix-footer ca-matrix-footer-bottom">
+      <div class="ca-brand">ADAPTIVE ADOPTION&trade; &mdash; CHANGE AGILITY&trade;</div>
+      <div class="ca-version">v1.0-beta &middot; These are single examples, drawn from a much more extensive repository</div>
+    </div>
+
+  </div>
 
   <!-- CTA -->
   <section class="ca-cta-section">
@@ -486,8 +514,17 @@ import '../styles/global.css';
 </Base>
 
 <style>
-  /* ═══════════════ CUSTOM PROPERTIES ═══════════════ */
-  :root {
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;700&display=swap');
+
+  /* ═══════════════ WRAPPER ═══════════════ */
+  .ca-wrapper {
+    --ink: #0f0e0d;
+    --paper: #f5f0e8;
+    --gold: #b8922a;
+    --mid: #6b6560;
+    --light: #e8e2d8;
+    --rule: 1px solid #c8bfb0;
+    --dark-bg: #1a1713;
     --p1: #2a6b4a;
     --p2: #2a5a7b;
     --p3: #3a5fa0;
@@ -495,175 +532,166 @@ import '../styles/global.css';
     --p5: #7a5c8a;
     --p6: #c84b2f;
     --p7: #8b2a2a;
+
+    background: #1a1713;
+    padding: 112px 20px 0;
   }
 
-  /* ═══════════════ HERO ═══════════════ */
-  .ca-hero {
-    min-height: 60vh;
-    display: flex;
-    align-items: flex-end;
+  /* ═══════════════ PAGE HEADER ═══════════════ */
+  .ca-page-header {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    padding: 40px 48px 32px;
+    background: var(--ink);
     position: relative;
     overflow: hidden;
-    padding: 160px 48px 80px;
   }
 
-  .ca-hero-bg {
+  .ca-page-header::after {
+    content: '\2723';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 300px;
+    color: rgba(255,255,255,0.03);
     position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(60, 40, 20, 0.7), transparent),
-      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(184, 146, 42, 0.05), transparent),
-      linear-gradient(170deg, var(--espresso) 0%, var(--chocolate) 40%, var(--chocolate-mid) 100%);
-    z-index: 0;
+    right: 40px;
+    top: -40px;
+    line-height: 1;
   }
 
-  .ca-hero-glow {
-    position: absolute;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(184, 146, 42, 0.08), transparent 70%);
-    top: 10%; right: -5%;
-    z-index: 1;
-    animation: glowPulse 8s ease-in-out infinite alternate;
+  .ca-page-header .ca-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 12px;
   }
 
-  .ca-hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+  .ca-page-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--paper);
+    line-height: 1.1;
     position: relative;
     z-index: 2;
   }
 
-  .ca-hero-label {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 12px;
-    letter-spacing: 6px;
-    color: var(--gold);
-    margin-bottom: 24px;
-  }
-
-  .ca-hero-headline {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(44px, 5vw, 72px);
-    line-height: 1.05;
-    color: var(--cream);
-    margin-bottom: 24px;
-  }
-
-  .ca-hero-headline em {
+  .ca-page-header h1 em {
     font-style: italic;
     color: var(--gold);
   }
 
-  .ca-hero-sub {
+  .ca-subtitle {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
-    font-size: 20px;
-    line-height: 1.6;
-    color: rgba(245, 240, 232, 0.7);
-    max-width: 700px;
+    font-size: 18px;
+    color: rgba(245,240,232,0.6);
+    margin-top: 16px;
+    position: relative;
+    z-index: 2;
   }
 
-  /* ═══════════════ SPLIT SECTION ═══════════════ */
-  .ca-split-section {
-    padding: 0 48px;
-    background: var(--chocolate);
-  }
-
-  .ca-split-inner {
-    max-width: 1200px;
-    margin: 0 auto;
+  /* ═══════════════ CONTEXT BOXES ═══════════════ */
+  .ca-context-boxes {
+    max-width: 1400px;
+    margin: 2px auto 2px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid rgba(184, 146, 42, 0.12);
+    gap: 2px;
+    align-items: stretch;
   }
 
-  .ca-split-col {
-    padding: 56px 48px;
+  .ca-context-box {
+    background: var(--paper);
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
   }
 
-  .ca-split-col:first-child {
-    border-right: 1px solid rgba(184, 146, 42, 0.12);
-    background: rgba(245, 240, 232, 0.02);
+  .ca-context-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.4;
   }
 
-  .ca-split-col:last-child {
-    background: rgba(184, 146, 42, 0.02);
-  }
+  .ca-context-box > * { position: relative; z-index: 1; }
 
-  .ca-split-label {
+  .ca-context-box .ca-box-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 11px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     color: var(--gold);
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
-  .ca-split-heading {
+  .ca-context-box h3 {
     font-family: 'DM Serif Display', serif;
-    font-size: 28px;
-    color: var(--cream);
-    margin-bottom: 32px;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 16px;
     line-height: 1.2;
+    min-height: 48px;
   }
 
-  .ca-split-list {
+  .ca-context-box ul {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    padding: 0;
+    margin: 0;
   }
 
-  .ca-split-list li {
-    font-size: 15px;
-    line-height: 1.65;
-    color: rgba(245, 240, 232, 0.75);
-    padding-left: 20px;
+  .ca-context-box li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 7px 0 7px 16px;
+    border-bottom: 1px solid var(--light);
     position: relative;
   }
 
-  .ca-split-list li::before {
+  .ca-context-box li::before {
     content: '';
     position: absolute;
-    left: 0; top: 8px;
-    width: 6px; height: 6px;
-    border-radius: 50%;
+    left: 0;
+    top: 16px;
+    width: 5px;
+    height: 5px;
     background: var(--gold);
+    border-radius: 50%;
   }
 
-  .ca-split-list li strong {
-    color: var(--cream);
-    font-weight: 700;
+  .ca-context-box li:last-child {
+    border-bottom: none;
+  }
+
+  .ca-context-box li strong {
+    color: var(--ink);
   }
 
   /* ═══════════════ REPO CTA ═══════════════ */
   .ca-repo-cta {
-    padding: 36px 48px;
+    max-width: 1400px;
+    margin: 2px auto 2px;
     background: var(--ink);
-    border-top: 1px solid rgba(184, 146, 42, 0.2);
-    border-bottom: 1px solid rgba(184, 146, 42, 0.2);
-  }
-
-  .ca-repo-cta-inner {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 36px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 32px;
   }
 
-  .ca-repo-cta-text {
+  .ca-repo-cta p {
     font-family: 'DM Serif Display', serif;
     font-size: 18px;
-    color: var(--cream);
+    color: var(--paper);
     font-style: italic;
     max-width: 700px;
     line-height: 1.5;
   }
 
-  .ca-repo-cta-btn {
+  .ca-repo-cta a {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -678,36 +706,64 @@ import '../styles/global.css';
     transition: all 0.3s;
   }
 
-  .ca-repo-cta-btn:hover { background: var(--cream); }
-  .ca-repo-cta-btn svg { width: 24px; height: 24px; }
+  .ca-repo-cta a:hover {
+    background: var(--paper);
+  }
 
-  /* ═══════════════ SECTION HEADER ═══════════════ */
-  .ca-section-header {
-    padding: 80px 48px 24px;
-    background: var(--dark-bg, #1a1713);
+  .ca-repo-cta svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  /* ═══════════════ SECTION BREAK ═══════════════ */
+  .ca-section-break {
+    max-width: 1400px;
+    margin: 2px auto 2px;
+    background: #2a2520;
+    padding: 56px 48px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
   }
 
-  .ca-section-header-label {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(20px, 3vw, 32px);
-    letter-spacing: 6px;
-    color: var(--gold);
-    text-transform: uppercase;
+  .ca-section-break::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 48px;
+    right: 48px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
   }
 
-  .ca-section-header-sub {
+  .ca-section-break::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 48px;
+    right: 48px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+
+  .ca-section-break p {
     font-family: 'DM Serif Display', serif;
-    font-style: italic;
-    font-size: 15px;
-    color: rgba(245,240,232,0.5);
-    margin-top: 12px;
+    font-size: 20px;
+    color: var(--paper);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
   }
 
-  /* ═══════════════ MATRIX WRAPPER ═══════════════ */
-  .ca-matrix-wrapper {
-    padding: 0 20px 40px;
-    background: var(--dark-bg, #1a1713);
+  .ca-break-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-top: 28px;
   }
 
   /* ═══════════════ COLUMN HEADERS ═══════════════ */
@@ -720,7 +776,7 @@ import '../styles/global.css';
   }
 
   .ca-col-header {
-    background: var(--ink, #0f0e0d);
+    background: var(--ink);
     padding: 16px 20px;
     text-align: center;
   }
@@ -734,6 +790,14 @@ import '../styles/global.css';
     font-size: 16px;
     letter-spacing: 3px;
     color: var(--gold);
+  }
+
+  .ca-col-header .ca-col-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    color: var(--mid);
+    margin-top: 4px;
+    letter-spacing: 0.5px;
   }
 
   /* ═══════════════ MATRIX ═══════════════ */
@@ -752,7 +816,7 @@ import '../styles/global.css';
     min-height: 180px;
   }
 
-  /* ═══════════════ PILLAR DEFINITION COLUMN ═══════════════ */
+  /* ═══════════════ DEFINITION COLUMN ═══════════════ */
   .ca-pillar-def {
     padding: 24px 20px;
     position: relative;
@@ -781,9 +845,9 @@ import '../styles/global.css';
   .ca-pillar-name {
     font-family: 'DM Serif Display', serif;
     font-size: 22px;
-    color: #f5f0e8;
+    color: var(--paper);
     line-height: 1.2;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     position: relative;
     z-index: 2;
   }
@@ -809,12 +873,10 @@ import '../styles/global.css';
 
   /* ═══════════════ CONTENT CELLS ═══════════════ */
   .ca-cell {
-    background: var(--paper, #f5f0e8);
+    background: var(--paper);
     padding: 20px;
     position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: flex-start;
   }
 
   .ca-cell::before {
@@ -829,6 +891,16 @@ import '../styles/global.css';
 
   .ca-cell > * { position: relative; z-index: 1; }
 
+  .ca-cell-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--mid);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: var(--rule);
+  }
+
   .ca-cell-item {
     padding-left: 12px;
     border-left: 3px solid transparent;
@@ -837,8 +909,8 @@ import '../styles/global.css';
   .ca-cell-item .ca-item-name {
     font-size: 13px;
     font-weight: 700;
-    color: var(--ink, #0f0e0d);
-    margin-bottom: 4px;
+    color: var(--ink);
+    margin-bottom: 3px;
   }
 
   .ca-cell-item .ca-item-desc {
@@ -867,32 +939,33 @@ import '../styles/global.css';
   .ca-matrix-footer {
     max-width: 1400px;
     margin: 2px auto 0;
-    background: var(--ink, #0f0e0d);
+    background: var(--ink);
     padding: 20px 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .ca-matrix-brand {
+  .ca-matrix-footer .ca-brand {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 13px;
     letter-spacing: 3px;
-    color: #f5f0e8;
+    color: var(--paper);
   }
 
-  .ca-matrix-note {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-style: italic;
-    color: rgba(245, 240, 232, 0.5);
-    letter-spacing: 0.3px;
+  .ca-matrix-footer .ca-version {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--mid);
   }
 
   /* ═══════════════ FOUR DRIVERS ═══════════════ */
   .ca-drivers-section {
-    padding: 80px 48px;
-    background: var(--paper, #f5f0e8);
+    max-width: 1400px;
+    margin: 40px auto 0;
+    background: var(--paper);
+    padding: 48px;
     position: relative;
     overflow: hidden;
   }
@@ -909,23 +982,19 @@ import '../styles/global.css';
 
   .ca-drivers-section > * { position: relative; z-index: 1; }
 
-  .ca-drivers-inner { max-width: 1200px; margin: 0 auto; }
-
   .ca-drivers-label {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 11px;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
     color: var(--gold);
-    text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .ca-drivers-headline {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(28px, 3.5vw, 44px);
-    color: var(--ink, #0f0e0d);
-    text-align: center;
-    margin-bottom: 56px;
+    font-size: 32px;
+    color: var(--ink);
+    margin-bottom: 36px;
     line-height: 1.15;
   }
 
@@ -936,12 +1005,11 @@ import '../styles/global.css';
   }
 
   .ca-driver-card {
-    padding: 40px 32px;
+    padding: 32px 24px;
     background: #fff;
     text-align: center;
     position: relative;
     overflow: hidden;
-    transition: all 0.4s;
     border-top: 3px solid var(--gold);
   }
 
@@ -957,50 +1025,44 @@ import '../styles/global.css';
 
   .ca-driver-card > * { position: relative; z-index: 1; }
 
-  .ca-driver-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-
   .ca-driver-icon {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 36px;
     color: var(--gold);
     opacity: 0.5;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .ca-driver-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 16px;
     letter-spacing: 4px;
-    color: var(--ink, #0f0e0d);
-    margin-bottom: 12px;
+    color: var(--ink);
+    margin-bottom: 8px;
   }
 
   .ca-driver-question {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
     font-size: 18px;
-    color: var(--ink, #0f0e0d);
+    color: var(--ink);
     margin-bottom: 12px;
     line-height: 1.3;
   }
 
   .ca-driver-desc {
-    font-size: 14px;
-    line-height: 1.65;
+    font-size: 13px;
+    line-height: 1.6;
     color: #3a3530;
     font-weight: 300;
   }
 
   /* ═══════════════ READING LIST ═══════════════ */
-  .ca-reading-list-section { background: var(--ink, #0f0e0d); }
-
   .ca-reading-list {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 48px;
+    max-width: 1400px;
+    margin: 2px auto 0;
+    background: var(--ink);
+    padding: 48px;
     position: relative;
     overflow: hidden;
   }
@@ -1011,11 +1073,12 @@ import '../styles/global.css';
     font-size: 240px;
     color: rgba(255,255,255,0.02);
     position: absolute;
-    right: 40px; top: -30px;
+    right: 40px;
+    top: -30px;
     line-height: 1;
   }
 
-  .ca-rl-label {
+  .ca-reading-list .ca-rl-label {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 11px;
     letter-spacing: 4px;
@@ -1026,11 +1089,11 @@ import '../styles/global.css';
   .ca-reading-list h2 {
     font-family: 'DM Serif Display', serif;
     font-size: 32px;
-    color: var(--paper, #f5f0e8);
+    color: var(--paper);
     margin-bottom: 8px;
   }
 
-  .ca-rl-subtitle {
+  .ca-reading-list .ca-rl-subtitle {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
     font-size: 16px;
@@ -1054,25 +1117,25 @@ import '../styles/global.css';
     gap: 2px;
   }
 
-  .ca-rl-author {
+  .ca-rl-entry .ca-rl-author {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 14px;
     letter-spacing: 2px;
     color: #e8c44a;
   }
 
-  .ca-rl-work {
+  .ca-rl-entry .ca-rl-work {
     font-family: 'DM Serif Display', serif;
     font-style: italic;
     font-size: 15px;
-    color: var(--paper, #f5f0e8);
+    color: var(--paper);
     line-height: 1.4;
   }
 
-  .ca-rl-line {
+  .ca-rl-entry .ca-rl-line {
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
-    color: var(--mid, #6b6560);
+    color: var(--mid);
     line-height: 1.4;
     margin-top: 2px;
   }
@@ -1081,15 +1144,19 @@ import '../styles/global.css';
     grid-column: 1 / -1;
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
-    color: var(--mid, #6b6560);
+    color: var(--mid);
     border-top: 1px solid rgba(200,191,176,0.15);
     padding-top: 24px;
-    margin-top: 16px;
+    margin-top: 24px;
     line-height: 1.6;
   }
 
   .ca-rl-note strong {
-    color: var(--paper, #f5f0e8);
+    color: var(--paper);
+  }
+
+  .ca-matrix-footer-bottom {
+    margin-top: 2px;
   }
 
   /* ═══════════════ CTA ═══════════════ */
@@ -1139,7 +1206,7 @@ import '../styles/global.css';
   /* ═══════════════ RELATED FRAMEWORKS ═══════════════ */
   .ca-related {
     padding: 80px 48px;
-    background: var(--chocolate);
+    background: #1a1713;
     border-top: 1px solid rgba(184, 146, 42, 0.08);
   }
 
@@ -1194,60 +1261,27 @@ import '../styles/global.css';
     text-transform: uppercase;
   }
 
-  /* ═══════════════ RESPONSIVE ═══════════════ */
-  @media (max-width: 1100px) {
-    .ca-pillar-row {
-      grid-template-columns: 220px 1fr 1fr 1fr 1fr;
-    }
-    .ca-col-headers {
-      grid-template-columns: 220px 1fr 1fr 1fr 1fr;
-    }
+  /* ═══════════════ PRINT ═══════════════ */
+  @media print {
+    .ca-wrapper { background: white; padding: 10px; }
+    .ca-page-header, .ca-pillar-def { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
 
-  @media (max-width: 900px) {
-    .ca-hero,
-    .ca-split-section,
-    .ca-repo-cta,
-    .ca-section-header,
-    .ca-drivers-section,
-    .ca-cta-section,
-    .ca-related {
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-    .ca-matrix-wrapper { padding-left: 12px; padding-right: 12px; }
-    .ca-split-inner { grid-template-columns: 1fr; }
-    .ca-split-col:first-child { border-right: none; border-bottom: 1px solid rgba(184, 146, 42, 0.12); }
-    .ca-drivers-grid { grid-template-columns: 1fr 1fr; }
-
-    .ca-col-headers { display: none; }
-    .ca-pillar-row {
-      grid-template-columns: 1fr;
-      min-height: auto;
-    }
-    .ca-pillar-def { padding: 24px; }
-    .ca-cell { padding: 16px 20px; }
-    .ca-cell-item { border-left-width: 3px; }
-    .ca-cell::after {
-      content: attr(data-label);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: var(--mid, #6b6560);
-      position: absolute;
-      top: 6px;
-      right: 10px;
-      z-index: 1;
-    }
-
-    .ca-repo-cta-inner { flex-direction: column; text-align: center; gap: 20px; }
-    .ca-reading-list { padding-left: 24px; padding-right: 24px; }
-    .ca-rl-grid { grid-template-columns: 1fr; }
+  /* ═══════════════ RESPONSIVE ═══════════════ */
+  @media (max-width: 1024px) {
+    .ca-related { padding-left: 24px; padding-right: 24px; }
     .ca-related-grid { grid-template-columns: 1fr; }
+    .ca-context-boxes { grid-template-columns: 1fr; }
+    .ca-repo-cta { flex-direction: column; text-align: center; gap: 20px; }
+    .ca-pillar-row { grid-template-columns: 1fr; min-height: auto; }
+    .ca-col-headers { display: none; }
+    .ca-rl-grid { grid-template-columns: 1fr; }
+    .ca-drivers-grid { grid-template-columns: 1fr 1fr; }
     .ca-matrix-footer { flex-direction: column; gap: 8px; text-align: center; padding: 16px 24px; }
   }
 
   @media (max-width: 640px) {
     .ca-drivers-grid { grid-template-columns: 1fr; }
+    .ca-cta-section { padding: 80px 24px; }
   }
 </style>
