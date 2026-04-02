@@ -5,8 +5,8 @@ interface Props {
 }
 
 const {
-  title = "Paul Gibbons Advisory — AI Adoption Strategy",
-  description = "Paul Gibbons: AI adoption strategist, keynote speaker, and author of 8 books. Creator of the Adaptive Adoption framework. Advisory for boards and executive teams."
+  title,
+  description,
 } = Astro.props;
 ---
 
@@ -15,8 +15,6 @@ const {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />

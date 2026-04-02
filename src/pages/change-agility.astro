@@ -2,22 +2,17 @@
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 import '../styles/global.css';
 ---
 
-<Base
-  title="Change Agility™ — AI Adoption Framework | Paul Gibbons Advisory"
-  description="Change Agility™: Seven pillars for building AI adoption capability. Evidence-based, behavioral-science-grounded, complexity-native. By Paul Gibbons."
->
+<Base>
   <Fragment slot="head">
-    <meta property="og:title" content="Change Agility™ — AI Adoption Framework | Paul Gibbons Advisory" />
-    <meta property="og:description" content="Change Agility™: Seven pillars for building AI adoption capability. Evidence-based, behavioral-science-grounded, complexity-native." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://paulgibbonsadvisory.com/change-agility" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Change Agility™ — AI Adoption Framework | Paul Gibbons Advisory" />
-    <meta name="twitter:description" content="Change Agility™: Seven pillars for building AI adoption capability. Evidence-based, behavioral-science-grounded, complexity-native." />
-    <link rel="canonical" href="https://paulgibbonsadvisory.com/change-agility" />
+    <SEO
+      title="Change Agility™ — AI Adoption Framework | Paul Gibbons Advisory"
+      description="Change Agility replaces traditional change management with a seven-pillar framework built for AI adoption speed. Integrates behavioral science, complexity theory, and craft-based learning."
+      canonicalUrl="/change-agility"
+    />
   </Fragment>
 
   <Nav />
@@ -37,7 +32,7 @@ import '../styles/global.css';
     <div class="ca-context-boxes">
       <div class="ca-context-box">
         <div class="ca-box-num">THE PROBLEM</div>
-        <h3>The Specific Adoption Problems AI Creates</h3>
+        <h2>The Specific Adoption Problems AI Creates</h2>
         <ul>
           <li><strong>Change is treated as a project, not a capability.</strong> Organizations run change as discrete initiatives with start dates and end dates. AI doesn't end. The organizations that win will be the ones that build permanent adaptive capacity &mdash; not the ones that execute the best rollout plan.</li>
           <li><strong>People are treated as the last mile.</strong> Traditional change cut the check, bought the tech, and persuaded people to use it. With AI, the human is the integration layer, not the end-user.</li>
@@ -51,7 +46,7 @@ import '../styles/global.css';
       </div>
       <div class="ca-context-box">
         <div class="ca-box-num">THE RESPONSE</div>
-        <h3>Why Change Agility Is Different</h3>
+        <h2>Why Change Agility Is Different</h2>
         <ul>
           <li><strong>Agility as infrastructure.</strong> Change Agility is not a program you run &mdash; it is a capability you build. Seven pillars, each with tools, processes, behaviors, and skills that compound over time. The flywheel, not the project plan.</li>
           <li><strong>People-first sequencing.</strong> Invert the order: begin with tools and workflows that serve the human, that augment rather than automate. You get to the efficiency gains faster by not starting with them.</li>
@@ -626,7 +621,7 @@ import '../styles/global.css';
     margin-bottom: 10px;
   }
 
-  .ca-context-box h3 {
+  .ca-context-box h2 {
     font-family: 'DM Serif Display', serif;
     font-size: 20px;
     color: var(--ink);

@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+  keywords?: string;
+}
+
+const siteUrl = 'https://paulgibbonsadvisory.com';
+
+const {
+  title,
+  description,
+  ogImage = '/images/og-default.png',
+  ogType = 'website',
+  canonicalUrl,
+  keywords = 'AI adoption, organizational change, leadership, adaptive adoption, Paul Gibbons',
+} = Astro.props;
+
+const resolvedCanonical = canonicalUrl
+  ? (canonicalUrl.startsWith('http') ? canonicalUrl : `${siteUrl}${canonicalUrl}`)
+  : `${siteUrl}${Astro.url.pathname}`;
+
+const resolvedImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<link rel="canonical" href={resolvedCanonical} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={resolvedImage} />
+<meta property="og:url" content={resolvedCanonical} />
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content="Paul Gibbons Advisory" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={resolvedImage} />

@@ -2,13 +2,18 @@
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 import '../styles/global.css';
 ---
 
-<Base
-  title="Keynotes & Speaking — Paul Gibbons | AI, Leadership, Change"
-  description="Book Paul Gibbons for keynotes on AI adoption, leadership in the AI era, and organizational change. Available via BrightSight (NA) and London Speaker Bureau (International)."
->
+<Base>
+  <Fragment slot="head">
+    <SEO
+      title="Keynotes & Speaking — Paul Gibbons | AI, Leadership, Change"
+      description="Book Paul Gibbons for keynotes on AI adoption, leadership in the AI era, and organizational change. Available via BrightSight (NA) and London Speaker Bureau (International)."
+      canonicalUrl="/keynotes"
+    />
+  </Fragment>
   <Nav />
 
   <!-- HERO -->

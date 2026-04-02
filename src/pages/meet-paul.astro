@@ -2,13 +2,18 @@
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 import '../styles/global.css';
 ---
 
-<Base
-  title="Meet Paul Gibbons | AI Strategist, Author and Keynote Speaker"
-  description="Paul Gibbons: 30 years helping leaders get the human side of technology right. Author of 8 books, AI adoption strategist, and keynote speaker."
->
+<Base>
+  <Fragment slot="head">
+    <SEO
+      title="Meet Paul Gibbons — AI Adoption Strategist & Keynote Speaker"
+      description="30 years helping leaders get the human side of technology right. Author of 8 books, advisor to Fortune 500 boards, creator of the Adaptive Adoption framework."
+      canonicalUrl="/meet-paul"
+    />
+  </Fragment>
   <Nav />
 
   <!-- ═══════════════════════════════════════════

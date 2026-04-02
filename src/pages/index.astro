@@ -11,10 +11,18 @@ import Corpus from '../components/Corpus.astro';
 import Testimonials from '../components/Testimonials.astro';
 import CtaSection from '../components/CtaSection.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 import '../styles/global.css';
 ---
 
 <Base>
+  <Fragment slot="head">
+    <SEO
+      title="Paul Gibbons Advisory — People-First AI Adoption"
+      description="Paul Gibbons is an AI adoption strategist, keynote speaker, and author of 8 books. Creator of the Adaptive Adoption framework — leadership, governance, and behavioral science for enterprise AI."
+      canonicalUrl="/"
+    />
+  </Fragment>
   <Nav />
   <Hero />
   <BureauStrip />

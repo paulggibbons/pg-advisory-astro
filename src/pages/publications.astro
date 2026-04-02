@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 import '../styles/global.css';
 
 const books = [
@@ -86,10 +87,14 @@ const collisions = [
 ];
 ---
 
-<Base
-  title="Publications — Books and Whitepapers by Paul Gibbons"
-  description="Books and whitepapers by Paul Gibbons — spanning leadership, organizational change, behavioral science, markets, AI adoption, and applied ethics. Eight published books and original research frameworks."
->
+<Base>
+  <Fragment slot="head">
+    <SEO
+      title="Publications — Books and Whitepapers by Paul Gibbons"
+      description="Books and whitepapers by Paul Gibbons — spanning leadership, organizational change, behavioral science, markets, AI adoption, and applied ethics. Eight published books and original research frameworks."
+      canonicalUrl="/publications"
+    />
+  </Fragment>
   <Nav />
 
   <!-- Schema markup for books -->

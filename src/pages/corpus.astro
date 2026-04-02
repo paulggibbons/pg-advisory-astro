@@ -2,13 +2,18 @@
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 import '../styles/global.css';
 ---
 
-<Base
-  title="The Corpus — Query 30 Years of Thinking | Paul Gibbons Advisory"
-  description="Most AI is trained on the internet. This one was trained on Paul Gibbons — 8 books, 30 years of research, unpublished work. Ask hard questions. Get cited answers."
->
+<Base>
+  <Fragment slot="head">
+    <SEO
+      title="The Corpus — Query 30 Years of Thinking | Paul Gibbons Advisory"
+      description="Most AI is trained on the internet. This one was trained on Paul Gibbons — 8 books, 30 years of research, unpublished work. Ask hard questions. Get cited answers."
+      canonicalUrl="/corpus"
+    />
+  </Fragment>
   <Nav />
 
   <!-- ═══════════════════════════════════════════

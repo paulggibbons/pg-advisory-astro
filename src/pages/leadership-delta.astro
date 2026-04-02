@@ -2,22 +2,17 @@
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
 import '../styles/global.css';
 ---
 
-<Base
-  title="AI Leadership Delta™ — Full Build Matrix | Paul Gibbons Advisory"
-  description="AI Leadership Delta™: Seven dimensions of AI-era leadership across three domains. A behavioral framework for leading in the age of AI. By Paul Gibbons."
->
+<Base>
   <Fragment slot="head">
-    <meta property="og:title" content="AI Leadership Delta™ — Full Build Matrix | Paul Gibbons Advisory" />
-    <meta property="og:description" content="AI Leadership Delta™: Seven dimensions of AI-era leadership across three domains. A behavioral framework for leading in the age of AI. By Paul Gibbons." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://paulgibbonsadvisory.com/leadership-delta" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AI Leadership Delta™ — Full Build Matrix | Paul Gibbons Advisory" />
-    <meta name="twitter:description" content="AI Leadership Delta™: Seven dimensions of AI-era leadership across three domains. A behavioral framework for leading in the age of AI. By Paul Gibbons." />
-    <link rel="canonical" href="https://paulgibbonsadvisory.com/leadership-delta" />
+    <SEO
+      title="AI Leadership Delta™ — Full Build Matrix | Paul Gibbons Advisory"
+      description="Seven leadership dimensions for the AI era. From strategic imagination to systems orchestration — behavioral, not decorative. Open source framework by Paul Gibbons."
+      canonicalUrl="/leadership-delta"
+    />
   </Fragment>
 
   <Nav />
@@ -36,7 +31,7 @@ import '../styles/global.css';
     <div class="ld-context-boxes">
       <div class="ld-context-box">
         <div class="ld-box-num">THE PROBLEM</div>
-        <h3>The Specific Leadership Problems AI Generates</h3>
+        <h2>The Specific Leadership Problems AI Generates</h2>
         <ul>
           <li><strong>Leaders can no longer govern from distance.</strong> If they do not use the tools themselves, they cannot judge what is real, what is possible, or what is dangerous &mdash; nor empathize with the frustrations teams are feeling, nor experience the potential viscerally.</li>
           <li><strong>Judgment gets harder, not easier.</strong> AI produces fluent answers at speed; the leadership job is no longer confidence, but calibration.</li>
@@ -50,7 +45,7 @@ import '../styles/global.css';
       </div>
       <div class="ld-context-box">
         <div class="ld-box-num">THE RESPONSE</div>
-        <h3>Why Leadership Delta Is Different</h3>
+        <h2>Why Leadership Delta Is Different</h2>
         <ul>
           <li><strong>Not a search-and-replace job.</strong> This framework starts from the claim that AI changes leadership itself, not just the agenda around it.</li>
           <li><strong>Behavioral, not decorative.</strong> It focuses on what leaders actually do: what they model, what they permit, what they challenge, and what systems they create.</li>
@@ -1240,7 +1235,7 @@ import '../styles/global.css';
     margin-bottom: 10px;
   }
 
-  .ld-context-box h3 {
+  .ld-context-box h2 {
     font-family: 'DM Serif Display', serif;
     font-size: 20px;
     color: var(--ink);
